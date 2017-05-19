@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		77F9FE391ECF525300E92BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE381ECF525300E92BF7 /* main.m */; };
 		77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */; };
-		77F9FE3F1ECF525300E92BF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3E1ECF525300E92BF7 /* ViewController.m */; };
 		77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE401ECF525300E92BF7 /* Main.storyboard */; };
 		77F9FE441ECF525300E92BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE431ECF525300E92BF7 /* Assets.xcassets */; };
 		77F9FE471ECF525300E92BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */; };
 		77F9FE521ECF525300E92BF7 /* SelfieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE511ECF525300E92BF7 /* SelfieTests.m */; };
+		77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,6 @@
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		77F9FE3D1ECF525300E92BF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		77F9FE3E1ECF525300E92BF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		77F9FE411ECF525300E92BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77F9FE431ECF525300E92BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77F9FE461ECF525300E92BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		77F9FE4D1ECF525300E92BF7 /* SelfieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE511ECF525300E92BF7 /* SelfieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfieTests.m; sourceTree = "<group>"; };
 		77F9FE531ECF525300E92BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCameraViewController.h; sourceTree = "<group>"; };
+		77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 			children = (
 				77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */,
 				77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */,
-				77F9FE3D1ECF525300E92BF7 /* ViewController.h */,
-				77F9FE3E1ECF525300E92BF7 /* ViewController.m */,
+				77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */,
+				77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */,
 				77F9FE401ECF525300E92BF7 /* Main.storyboard */,
 				77F9FE431ECF525300E92BF7 /* Assets.xcassets */,
 				77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */,
@@ -211,8 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F9FE3F1ECF525300E92BF7 /* ViewController.m in Sources */,
 				77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */,
+				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
 				77F9FE391ECF525300E92BF7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
