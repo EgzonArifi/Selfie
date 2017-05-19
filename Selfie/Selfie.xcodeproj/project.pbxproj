@@ -14,6 +14,10 @@
 		77F9FE471ECF525300E92BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */; };
 		77F9FE521ECF525300E92BF7 /* SelfieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE511ECF525300E92BF7 /* SelfieTests.m */; };
 		77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */; };
+		77F9FE621ECF6E3000E92BF7 /* CameraStickersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */; };
+		77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */; };
+		77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE661ECFA9D400E92BF7 /* StickerCell.m */; };
+		77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		77F9FE531ECF525300E92BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCameraViewController.h; sourceTree = "<group>"; };
 		77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCameraViewController.m; sourceTree = "<group>"; };
+		77F9FE601ECF6E3000E92BF7 /* CameraStickersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraStickersView.h; sourceTree = "<group>"; };
+		77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraStickersView.m; sourceTree = "<group>"; };
+		77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraStickersView.xib; sourceTree = "<group>"; };
+		77F9FE651ECFA9D400E92BF7 /* StickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCell.h; sourceTree = "<group>"; };
+		77F9FE661ECFA9D400E92BF7 /* StickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCell.m; sourceTree = "<group>"; };
+		77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,12 @@
 			children = (
 				77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */,
 				77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */,
+				77F9FE601ECF6E3000E92BF7 /* CameraStickersView.h */,
+				77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */,
+				77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */,
+				77F9FE651ECFA9D400E92BF7 /* StickerCell.h */,
+				77F9FE661ECFA9D400E92BF7 /* StickerCell.m */,
+				77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -200,8 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F9FE471ECF525300E92BF7 /* LaunchScreen.storyboard in Resources */,
+				77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */,
 				77F9FE441ECF525300E92BF7 /* Assets.xcassets in Resources */,
 				77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */,
+				77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +239,9 @@
 			files = (
 				77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
+				77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */,
 				77F9FE391ECF525300E92BF7 /* main.m in Sources */,
+				77F9FE621ECF6E3000E92BF7 /* CameraStickersView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -338,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -350,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Selfie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.egzonarifi.Selfie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Selfie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.egzonarifi.Selfie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
