@@ -83,8 +83,7 @@
 			children = (
 				77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */,
 				77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */,
-				77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */,
-				77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */,
+				77F9FE5F1ECF535000E92BF7 /* Camera */,
 				77F9FE401ECF525300E92BF7 /* Main.storyboard */,
 				77F9FE431ECF525300E92BF7 /* Assets.xcassets */,
 				77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */,
@@ -109,6 +108,15 @@
 				77F9FE531ECF525300E92BF7 /* Info.plist */,
 			);
 			path = SelfieTests;
+			sourceTree = "<group>";
+		};
+		77F9FE5F1ECF535000E92BF7 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */,
+				77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */,
+			);
+			name = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
