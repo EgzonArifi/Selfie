@@ -37,6 +37,9 @@
     //        self.edgesForExtendedLayout = UIRectEdgeNone;
     //    }
     
+    self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
+    [self.stickerContainerView addSubview:self.stickersView];
+    
     self.navigationController.navigationBarHidden = YES;
     [self.navigationController setNavigationBarHidden:YES];
     
@@ -86,12 +89,6 @@
     [session stopRunning];
     //    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) dealloc
@@ -207,7 +204,7 @@
     AVCaptureDevice *backCamera=nil;
     
     // check if device available
-    if (devices.count==0) {
+    if (devices.count == 0) {
         NSLog(@"No Camera Available");
         [self disableCameraDeviceControls];
         return;
@@ -371,7 +368,7 @@
     //    assetOrientation = ALAssetOrientationUp;
     
     // adjust image orientation
-    NSLog(@"orientation: %ld",orientationLast);
+    NSLog(@"orientation: %ld",(long)orientationLast);
     orientationAfterProcess = orientationLast;
     switch (orientationLast) {
         case UIInterfaceOrientationPortrait:
@@ -465,21 +462,6 @@
 }
 
 #pragma mark - Button clicks
-- (IBAction)gridToogle:(UIButton *)sender{
-    if (sender.selected) {
-        sender.selected = NO;
-        [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
-            self.ImgViewGrid.alpha = 1.0f;
-        } completion:nil];
-    }
-    else{
-        sender.selected = YES;
-        [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
-            self.ImgViewGrid.alpha = 0.0f;
-        } completion:nil];
-    }
-}
-
 -(IBAction)switchToLibrary:(id)sender {
     
     if (session) {
@@ -597,7 +579,7 @@
 
 #pragma mark - UI Control Helpers
 - (void)hideControllers{
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.0 animations:^{
         //1)animate them out of screen
         self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y+116.0);
         self.topBar.center = CGPointMake(self.topBar.center.x, self.topBar.center.y-44.0);

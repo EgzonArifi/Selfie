@@ -26,6 +26,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMotion/CoreMotion.h>
+#import "CameraStickersView.h"
 
 @protocol YCameraViewControllerDelegate;
 
@@ -57,6 +58,9 @@
 @property (nonatomic, strong) IBOutlet UIView *topBar;
 @property (retain, nonatomic) IBOutlet UIView *imagePreview;
 @property (retain, nonatomic) IBOutlet UIImageView *captureImage;
+
+@property(nonatomic, strong) CameraStickersView *stickersView;
+@property (weak, nonatomic) IBOutlet UIView *stickerContainerView;
 
 @end
 
