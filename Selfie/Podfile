@@ -6,7 +6,7 @@ target 'Selfie' do
   # use_frameworks!
 
   # Pods for Selfie
-
+  pod "CSStickyHeaderFlowLayout"
   target 'SelfieTests' do
     inherit! :search_paths
     # Pods for testing
