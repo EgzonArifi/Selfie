@@ -8,6 +8,8 @@
 
 #import "YCameraViewController.h"
 #import <ImageIO/ImageIO.h>
+#import <Social/Social.h>
+#import "EAAlertView.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
@@ -73,10 +75,10 @@
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
     [self.stickerImageView addGestureRecognizer:pinchGestureRecognizer];
-
+    
     UIRotationGestureRecognizer *rotationGestureRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationWithGestureRecognizer:)];
     [self.stickerImageView addGestureRecognizer:rotationGestureRecognizer];
-
+    
 }
 - (void)didSelectSticker:(NSString *)sticker {
     [self.stickerImageView setImage:[UIImage imageNamed:sticker]];
@@ -587,9 +589,10 @@
     } completion:nil];
 }
 
+#pragma mark - Gestures
 -(void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)pgr{
     CGPoint point = [pgr locationInView:self.videoContainerView];
-
+    
     CGRect boundsRect = CGRectMake(-50, -50,self.videoContainerView.bounds.size.width+50,
                                    self.videoContainerView.bounds.size.height+50);
     if (pgr.state == UIGestureRecognizerStateChanged) {
@@ -612,5 +615,52 @@
     self.stickerImageView.transform = CGAffineTransformRotate(self.stickerImageView.transform, rotationGestureRecognizer.rotation);
     
     rotationGestureRecognizer.rotation = 0.0;
+}
+#pragma mark - Share
+- (IBAction)postToFacebook:(id)sender {
+    [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
+        if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            [controller setInitialText:@"#LDK#AKR"];
+            [controller addImage:image];
+            [self presentViewController:controller animated:YES completion:Nil];
+        } else {
+            [EAAlertView showMessage:@"Nuk e keni konfiguruar kete aplikacion" withTitle:@"Error"];
+        }
+    }];
+}
+
+- (IBAction)postToTwitter:(id)sender {
+    [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+        {
+            SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [tweetSheet setInitialText:@"#LDK"];
+            [tweetSheet addImage:image];
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+        } else {
+            [EAAlertView showMessage:@"Nuk e keni konfiguruar kete aplikacion" withTitle:@"Error"];
+        }
+    }];
+}
+- (IBAction)saveToCameraRoll:(id)sender {
+    [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
+        if (image) {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+            [EAAlertView showMessage:@"Imazhi u ruajt me sukses" withTitle:@"Sukses"];
+        } else {
+            [EAAlertView showMessage:@"Problem gjate ruajtjes" withTitle:@"Error"];
+        }
+    }];
+}
+- (void) imageWithView:(UIView *)view completion:(void (^)(UIImage *image))block
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0f);
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:NO];
+    UIImage * snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    block(snapshotImage);
 }
 @end
