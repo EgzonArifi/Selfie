@@ -1,5 +1,5 @@
 //
-//  HomeController.h
+//  CandidateCell.h
 //  Selfie
 //
 //  Created by Egzon Arifi on 5/20/17.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeController : UICollectionViewController
+@interface CandidateCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *candidateImage;
+
 
 @end

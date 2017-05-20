@@ -1,13 +1,13 @@
 //
-//  HomeController.h
+//  CandidateCell.m
 //  Selfie
 //
 //  Created by Egzon Arifi on 5/20/17.
 //  Copyright © 2017 Egzon Arifi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CandidateCell.h"
 
-@interface HomeController : UICollectionViewController
+@implementation CandidateCell
 
 @end
