@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SelectedStickerDelegate <NSObject>
+
+@required
+- (void)didSelectSticker:(NSString *)sticker;
+
+@end
+
 @interface CameraStickersView : UIView
+
+@property (nonatomic, weak) id <SelectedStickerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet CameraStickersView *mainView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray *stickers;
+
 @end

@@ -8,10 +8,11 @@
 
 #import "YCameraViewController.h"
 #import <ImageIO/ImageIO.h>
+#import "UIView+draggable.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
-@interface YCameraViewController (){
+@interface YCameraViewController ()<SelectedStickerDelegate> {
     UIInterfaceOrientation orientationLast, orientationAfterProcess;
     CMMotionManager *motionManager;
 }
@@ -38,6 +39,7 @@
     //    }
     
     self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
+    self.stickersView.delegate = self;
     [self.stickerContainerView addSubview:self.stickersView];
     
     self.navigationController.navigationBarHidden = YES;
@@ -66,18 +68,21 @@
     // Initialize Motion Manager
     [self initializeMotionManager];
     
-   UIPanGestureRecognizer *stickerGesture = [[UIPanGestureRecognizer alloc]
-               initWithTarget:self
-               action:@selector(handlePan:)];
-    [self.stickerImageView addGestureRecognizer:stickerGesture];
     [self.stickerImageView setUserInteractionEnabled:YES];
+    [self.stickerImageView enableDragging];
+    [self.stickerImageView setCagingArea:CGRectMake(-50, -50, self.videoContainerView.bounds.size.width+100, self.videoContainerView.bounds.size.height+100)];
     self.videoContainerView.clipsToBounds = YES;
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
     [self.stickerImageView addGestureRecognizer:pinchGestureRecognizer];
 
-}
+    UIRotationGestureRecognizer *rotationGestureRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationWithGestureRecognizer:)];
+    [self.stickerImageView addGestureRecognizer:rotationGestureRecognizer];
 
+}
+- (void)didSelectSticker:(NSString *)sticker {
+    [self.stickerImageView setImage:[UIImage imageNamed:sticker]];
+}
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
@@ -585,22 +590,14 @@
     } completion:nil];
 }
 
-- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
-    
-    if (recognizer.state == UIGestureRecognizerStateChanged) {
-        
-        CGPoint center = recognizer.view.center;
-        CGPoint translation = [recognizer translationInView:self.videoContainerView];
-        center = CGPointMake(center.x + translation.x, center.y + translation.y);
-
-        recognizer.view.center = center;
-        
-    }
-    [recognizer setTranslation:CGPointZero inView:recognizer.view];
-}
 -(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
     self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
     
     pinchGestureRecognizer.scale = 1.0;
+}
+-(void)handleRotationWithGestureRecognizer:(UIRotationGestureRecognizer *)rotationGestureRecognizer{
+    self.stickerImageView.transform = CGAffineTransformRotate(self.stickerImageView.transform, rotationGestureRecognizer.rotation);
+    
+    rotationGestureRecognizer.rotation = 0.0;
 }
 @end

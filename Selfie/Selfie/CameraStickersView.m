@@ -41,6 +41,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.delegate didSelectSticker:self.stickers[indexPath.row]];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
