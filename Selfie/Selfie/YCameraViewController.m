@@ -8,7 +8,6 @@
 
 #import "YCameraViewController.h"
 #import <ImageIO/ImageIO.h>
-#import "UIView+draggable.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
@@ -71,9 +70,6 @@
     [self.stickerImageView setUserInteractionEnabled:YES];
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
     [self.stickerImageView addGestureRecognizer:panGestureRecognizer];
-    /*[self.stickerImageView enableDragging];
-    [self.stickerImageView setCagingArea:CGRectMake(-50, -50, self.videoContainerView.bounds.size.width+100, self.videoContainerView.bounds.size.height+100)];
-    self.videoContainerView.clipsToBounds = YES;*/
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
     [self.stickerImageView addGestureRecognizer:pinchGestureRecognizer];

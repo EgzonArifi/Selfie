@@ -7,62 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A9B6594F1CC620152C8CCBD9CCDA90E /* Pods-Selfie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A31728DC0BF79AC8AB3064C30B3C66 /* Pods-Selfie-dummy.m */; };
 		0B1FBC6B9EE546B32FD099152B1E225E /* Pods-SelfieTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEFF5A3E9552CDB9F8D4FE88FD56639 /* Pods-SelfieTests-dummy.m */; };
-		23DF7061D0D97DC0CF9C276EB9E067A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		37F1516468E91BFFB47E4C188825A8F5 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 77ED214E95A356FFB93B6AB80167A919 /* UIView+draggable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18D3C47090927DEDD865B05802459413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		932A796B6A29CE45B75218B5B72415CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		A6E6DEFE08A12143E1FE82CE5725E71D /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3531AE92E38A10565CBFF73BF38D5910 /* UIView+draggable.m */; };
-		E1FFA59027095826EECC8EB421FD2E5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		E7561DB199751C648A7A9FE8A8A1FA6E /* UIView+draggable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA68895DE1FF1AE490E463AD2EFCBEC /* UIView+draggable-dummy.m */; };
+		B36D358A0603E70104AE1B109C35817D /* Pods-Selfie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A31728DC0BF79AC8AB3064C30B3C66 /* Pods-Selfie-dummy.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		48C0624A9BB87D532B5742DE85BC43D8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9199F59CE6C25E522046F87C482258DD;
-			remoteInfo = "UIView+draggable";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		06C9536C1368CC2EEE285FAFAB45F7B4 /* Pods-Selfie-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Selfie-resources.sh"; sourceTree = "<group>"; };
 		0BA9038A461E7538BF1CB5B818F20DE5 /* Pods-SelfieTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SelfieTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0FA68895DE1FF1AE490E463AD2EFCBEC /* UIView+draggable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+draggable-dummy.m"; sourceTree = "<group>"; };
+		2BA1797E4BB47BA568E3134B7FF0B3A2 /* libPods-Selfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEFF5A3E9552CDB9F8D4FE88FD56639 /* Pods-SelfieTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SelfieTests-dummy.m"; sourceTree = "<group>"; };
-		2FC0FDD8795739324A7306E3CDC9F8C0 /* UIView+draggable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+draggable-prefix.pch"; sourceTree = "<group>"; };
 		33A43A05F26270333C088EB43646160C /* Pods-Selfie-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Selfie-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3531AE92E38A10565CBFF73BF38D5910 /* UIView+draggable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+draggable.m"; path = "Source/UIView+draggable.m"; sourceTree = "<group>"; };
 		3976FB781AC61469F695746606ABBD91 /* Pods-Selfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Selfie.debug.xcconfig"; sourceTree = "<group>"; };
-		3DAC89C8066025282A93089DE1015E53 /* libPods-SelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE5863796AF98875C3E26732320FAEE /* Pods-Selfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Selfie.release.xcconfig"; sourceTree = "<group>"; };
 		44353FA192AAE3297035D11BC141315B /* Pods-Selfie-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Selfie-acknowledgements.plist"; sourceTree = "<group>"; };
 		54BC92916306F5530B7D624FE5FA179A /* Pods-SelfieTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SelfieTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		57A31728DC0BF79AC8AB3064C30B3C66 /* Pods-Selfie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Selfie-dummy.m"; sourceTree = "<group>"; };
-		59E51FE1EC85F6382B3718EC22A1D9E4 /* UIView+draggable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIView+draggable.xcconfig"; sourceTree = "<group>"; };
 		68446449F3169D53AF5961ED4069155B /* Pods-SelfieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SelfieTests.release.xcconfig"; sourceTree = "<group>"; };
-		77ED214E95A356FFB93B6AB80167A919 /* UIView+draggable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "Source/UIView+draggable.h"; sourceTree = "<group>"; };
 		7A7F16D3E4CAAF7D5792E8CFE28D50AA /* Pods-Selfie-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Selfie-frameworks.sh"; sourceTree = "<group>"; };
 		7CBA82D80917CA78CBB43E60A60050E2 /* Pods-SelfieTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SelfieTests-resources.sh"; sourceTree = "<group>"; };
-		928E8F0457C3DE9119019740334E4786 /* libUIView+draggable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIView+draggable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF3781D09BCF29DB87B96875598ED7B /* libPods-SelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BF1B00E1D32A37B26ACB150948B3BC76 /* libPods-Selfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EBC1ADC463E168F161A9D2F09B9EFADD /* Pods-SelfieTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SelfieTests-frameworks.sh"; sourceTree = "<group>"; };
 		F2C93DAFBD39108DC9F877AF0D0C3E0E /* Pods-SelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D1EFBF9188DA9460A58B4F27FB00097 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1FFA59027095826EECC8EB421FD2E5E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		605E7903A82E40634230CBF53AD1F71E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,38 +43,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6F35F180B663DB825D076FB003CC0A7 /* Frameworks */ = {
+		ED365FC03B056BC2532C8D6D216A46E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23DF7061D0D97DC0CF9C276EB9E067A3 /* Foundation.framework in Frameworks */,
+				18D3C47090927DEDD865B05802459413 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A22643597F100A42E73D75B73413461 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				59E51FE1EC85F6382B3718EC22A1D9E4 /* UIView+draggable.xcconfig */,
-				0FA68895DE1FF1AE490E463AD2EFCBEC /* UIView+draggable-dummy.m */,
-				2FC0FDD8795739324A7306E3CDC9F8C0 /* UIView+draggable-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UIView+draggable";
-			sourceTree = "<group>";
-		};
-		2FB2D60CA2A9AC7FCA79AB05038E0422 /* UIView+draggable */ = {
-			isa = PBXGroup;
-			children = (
-				77ED214E95A356FFB93B6AB80167A919 /* UIView+draggable.h */,
-				3531AE92E38A10565CBFF73BF38D5910 /* UIView+draggable.m */,
-				1A22643597F100A42E73D75B73413461 /* Support Files */,
-			);
-			path = "UIView+draggable";
-			sourceTree = "<group>";
-		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +62,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6EF92C7F2F72DFBE99145FFB36A6E993 /* Products */ = {
+		4FB854D43FF778DE3D1AB264D91E551D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF1B00E1D32A37B26ACB150948B3BC76 /* libPods-Selfie.a */,
-				3DAC89C8066025282A93089DE1015E53 /* libPods-SelfieTests.a */,
-				928E8F0457C3DE9119019740334E4786 /* libUIView+draggable.a */,
+				2BA1797E4BB47BA568E3134B7FF0B3A2 /* libPods-Selfie.a */,
+				7EF3781D09BCF29DB87B96875598ED7B /* libPods-SelfieTests.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,8 +76,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9F301DDDC2E0999CE55C1E7CA864E488 /* Pods */,
-				6EF92C7F2F72DFBE99145FFB36A6E993 /* Products */,
+				4FB854D43FF778DE3D1AB264D91E551D /* Products */,
 				7E77A2341CD87994A629262C85FB3565 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -139,14 +88,6 @@
 				A6D45E9098AA3CE3D084D9A49925C757 /* Pods-SelfieTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9F301DDDC2E0999CE55C1E7CA864E488 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2FB2D60CA2A9AC7FCA79AB05038E0422 /* UIView+draggable */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		A47ED12E474E6654593D1E1D965A9EC9 /* Pods-Selfie */ = {
@@ -189,35 +130,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		E7A30817D5188BEB3F920E1A469400C8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37F1516468E91BFFB47E4C188825A8F5 /* UIView+draggable.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		04B916639CAFC1D7EC2627CB56938EA0 /* Pods-Selfie */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BCD242000020825620D70C312BBBE2A /* Build configuration list for PBXNativeTarget "Pods-Selfie" */;
-			buildPhases = (
-				0EA2D83B8200AD93F60DD74CABE5DCD9 /* Sources */,
-				4D1EFBF9188DA9460A58B4F27FB00097 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65AABC0B8A97FED00800C6CC0FF71D0E /* PBXTargetDependency */,
-			);
-			name = "Pods-Selfie";
-			productName = "Pods-Selfie";
-			productReference = BF1B00E1D32A37B26ACB150948B3BC76 /* libPods-Selfie.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		4B9142B811DB9B78BD79FC8344B4A84D /* Pods-SelfieTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4520AE5C201006224820A7CF1F177BD0 /* Build configuration list for PBXNativeTarget "Pods-SelfieTests" */;
@@ -231,24 +144,23 @@
 			);
 			name = "Pods-SelfieTests";
 			productName = "Pods-SelfieTests";
-			productReference = 3DAC89C8066025282A93089DE1015E53 /* libPods-SelfieTests.a */;
+			productReference = 7EF3781D09BCF29DB87B96875598ED7B /* libPods-SelfieTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		9199F59CE6C25E522046F87C482258DD /* UIView+draggable */ = {
+		5008153869D489F704F8BFC19F6871E1 /* Pods-Selfie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54C60446B8D602829846E257639CAB76 /* Build configuration list for PBXNativeTarget "UIView+draggable" */;
+			buildConfigurationList = 1A301C5BD9C31188F4750E6D06EE8F0E /* Build configuration list for PBXNativeTarget "Pods-Selfie" */;
 			buildPhases = (
-				AE32C9C08CB68D006AEAD469FF7D418D /* Sources */,
-				D6F35F180B663DB825D076FB003CC0A7 /* Frameworks */,
-				E7A30817D5188BEB3F920E1A469400C8 /* Headers */,
+				DDE36B19F252D17BA106C52533B01E66 /* Sources */,
+				ED365FC03B056BC2532C8D6D216A46E4 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "UIView+draggable";
-			productName = "UIView+draggable";
-			productReference = 928E8F0457C3DE9119019740334E4786 /* libUIView+draggable.a */;
+			name = "Pods-Selfie";
+			productName = "Pods-Selfie";
+			productReference = 2BA1797E4BB47BA568E3134B7FF0B3A2 /* libPods-Selfie.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -268,26 +180,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6EF92C7F2F72DFBE99145FFB36A6E993 /* Products */;
+			productRefGroup = 4FB854D43FF778DE3D1AB264D91E551D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04B916639CAFC1D7EC2627CB56938EA0 /* Pods-Selfie */,
+				5008153869D489F704F8BFC19F6871E1 /* Pods-Selfie */,
 				4B9142B811DB9B78BD79FC8344B4A84D /* Pods-SelfieTests */,
-				9199F59CE6C25E522046F87C482258DD /* UIView+draggable */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0EA2D83B8200AD93F60DD74CABE5DCD9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A9B6594F1CC620152C8CCBD9CCDA90E /* Pods-Selfie-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F45356A0EBC881544784DEB22BF5782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,50 +199,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE32C9C08CB68D006AEAD469FF7D418D /* Sources */ = {
+		DDE36B19F252D17BA106C52533B01E66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7561DB199751C648A7A9FE8A8A1FA6E /* UIView+draggable-dummy.m in Sources */,
-				A6E6DEFE08A12143E1FE82CE5725E71D /* UIView+draggable.m in Sources */,
+				B36D358A0603E70104AE1B109C35817D /* Pods-Selfie-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		65AABC0B8A97FED00800C6CC0FF71D0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIView+draggable";
-			target = 9199F59CE6C25E522046F87C482258DD /* UIView+draggable */;
-			targetProxy = 48C0624A9BB87D532B5742DE85BC43D8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		007818CAEEEE5B90B277BF9DD2FF3024 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59E51FE1EC85F6382B3718EC22A1D9E4 /* UIView+draggable.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UIView+draggable/UIView+draggable-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +254,29 @@
 			};
 			name = Debug;
 		};
+		2171DAEED166DF1D2C497B86E298927B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE5863796AF98875C3E26732320FAEE /* Pods-Selfie.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -424,30 +317,7 @@
 			};
 			name = Release;
 		};
-		76D718D99C4E565578714BA4736F0FA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DE5863796AF98875C3E26732320FAEE /* Pods-Selfie.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		792D78A9184C7729320A4138E71C1D9A /* Debug */ = {
+		A0B29C2E4A6140B55E0EAA037BD33AA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3976FB781AC61469F695746606ABBD91 /* Pods-Selfie.debug.xcconfig */;
 			buildSettings = {
@@ -469,29 +339,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
-		};
-		8A0E4B236F52F0E3355825968D83F20F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59E51FE1EC85F6382B3718EC22A1D9E4 /* UIView+draggable.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UIView+draggable/UIView+draggable-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		DE6AA7137B793EC63D567A465E73F5E9 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -542,6 +389,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A301C5BD9C31188F4750E6D06EE8F0E /* Build configuration list for PBXNativeTarget "Pods-Selfie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0B29C2E4A6140B55E0EAA037BD33AA9 /* Debug */,
+				2171DAEED166DF1D2C497B86E298927B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -556,24 +412,6 @@
 			buildConfigurations = (
 				DF7068388BEE08A3E309EAD73B4CECD5 /* Debug */,
 				DE6AA7137B793EC63D567A465E73F5E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54C60446B8D602829846E257639CAB76 /* Build configuration list for PBXNativeTarget "UIView+draggable" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				007818CAEEEE5B90B277BF9DD2FF3024 /* Debug */,
-				8A0E4B236F52F0E3355825968D83F20F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BCD242000020825620D70C312BBBE2A /* Build configuration list for PBXNativeTarget "Pods-Selfie" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				792D78A9184C7729320A4138E71C1D9A /* Debug */,
-				76D718D99C4E565578714BA4736F0FA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
