@@ -498,7 +498,6 @@
     [self showControllers];
     
     haveImage=NO;
-    FrontCamera = NO;
     //    [self performSelector:@selector(initializeCamera) withObject:nil afterDelay:0.001];
     [session startRunning];
 }
