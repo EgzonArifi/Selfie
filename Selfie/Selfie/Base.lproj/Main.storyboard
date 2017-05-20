@@ -47,14 +47,17 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XN2-nM-XxB" userLabel="Video">
-                                <rect key="frame" x="0.0" y="1" width="320" height="319"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6Y-GH-TX2">
-                                        <rect key="frame" x="0.0" y="-1" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trr-ug-Vmz">
-                                        <rect key="frame" x="0.0" y="-1" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sticker4" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-W8-p3q">
+                                        <rect key="frame" x="18" y="126" width="116" height="116"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,7 +221,9 @@
                         <outlet property="photoBar" destination="jdR-fk-moZ" id="Anr-ul-eA5"/>
                         <outlet property="photoCaptureButton" destination="Fmb-qR-CD5" id="tXc-G8-UuY"/>
                         <outlet property="stickerContainerView" destination="Ufo-34-6yJ" id="QqE-Dp-N6p"/>
+                        <outlet property="stickerImageView" destination="lbm-W8-p3q" id="jwm-li-bOn"/>
                         <outlet property="topBar" destination="vd3-Yn-qbt" id="NSG-Hp-N8I"/>
+                        <outlet property="videoContainerView" destination="XN2-nM-XxB" id="Bg7-Z1-QbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hp2-x1-vcu" sceneMemberID="firstResponder"/>
@@ -236,6 +241,7 @@
         <image name="rotate" width="50" height="45"/>
         <image name="save" width="112" height="112"/>
         <image name="snap" width="157" height="157"/>
+        <image name="sticker4" width="127" height="127"/>
         <image name="twiter" width="64" height="64"/>
     </resources>
 </document>

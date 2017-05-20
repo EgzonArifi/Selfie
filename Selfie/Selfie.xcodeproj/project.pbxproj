@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2D309276B8FDBF75284E6B /* libPods-SelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */; };
 		77F9FE391ECF525300E92BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE381ECF525300E92BF7 /* main.m */; };
 		77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */; };
 		77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE401ECF525300E92BF7 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */; };
 		77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE661ECFA9D400E92BF7 /* StickerCell.m */; };
 		77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */; };
+		FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.release.xcconfig"; sourceTree = "<group>"; };
+		671E45BC988311D0F61314F2 /* Pods-Selfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.debug.xcconfig"; sourceTree = "<group>"; };
+		6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE341ECF525300E92BF7 /* Selfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +56,8 @@
 		77F9FE651ECFA9D400E92BF7 /* StickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCell.h; sourceTree = "<group>"; };
 		77F9FE661ECFA9D400E92BF7 /* StickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCell.m; sourceTree = "<group>"; };
 		77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
+		84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,18 +73,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2D309276B8FDBF75284E6B /* libPods-SelfieTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63E937968F6052CC0D1F4B1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */,
+				6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77F9FE2B1ECF525300E92BF7 = {
 			isa = PBXGroup;
 			children = (
 				77F9FE361ECF525300E92BF7 /* Selfie */,
 				77F9FE501ECF525300E92BF7 /* SelfieTests */,
 				77F9FE351ECF525300E92BF7 /* Products */,
+				8F3D59119A47B3425017F39C /* Pods */,
+				63E937968F6052CC0D1F4B1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +156,17 @@
 			name = Camera;
 			sourceTree = "<group>";
 		};
+		8F3D59119A47B3425017F39C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				671E45BC988311D0F61314F2 /* Pods-Selfie.debug.xcconfig */,
+				D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */,
+				84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */,
+				4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77F9FE561ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie" */;
 			buildPhases = (
+				37FC71010E8761B0CCA7B1B1 /* [CP] Check Pods Manifest.lock */,
 				77F9FE301ECF525300E92BF7 /* Sources */,
 				77F9FE311ECF525300E92BF7 /* Frameworks */,
 				77F9FE321ECF525300E92BF7 /* Resources */,
+				9FF144ED67D47DC5E9E32E63 /* [CP] Embed Pods Frameworks */,
+				4280587EC81CCCC309EFE925 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77F9FE591ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "SelfieTests" */;
 			buildPhases = (
+				65BBB079914F647C4208E7C3 /* [CP] Check Pods Manifest.lock */,
 				77F9FE491ECF525300E92BF7 /* Sources */,
 				77F9FE4A1ECF525300E92BF7 /* Frameworks */,
 				77F9FE4B1ECF525300E92BF7 /* Resources */,
+				7313188099369841DFA8BFFC /* [CP] Embed Pods Frameworks */,
+				E18C5534A0569A1798B861C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +269,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37FC71010E8761B0CCA7B1B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4280587EC81CCCC309EFE925 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie/Pods-Selfie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65BBB079914F647C4208E7C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7313188099369841DFA8BFFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF144ED67D47DC5E9E32E63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie/Pods-Selfie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E18C5534A0569A1798B861C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77F9FE301ECF525300E92BF7 /* Sources */ = {
@@ -367,6 +498,7 @@
 		};
 		77F9FE571ECF525300E92BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671E45BC988311D0F61314F2 /* Pods-Selfie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Selfie/Info.plist;
@@ -379,6 +511,7 @@
 		};
 		77F9FE581ECF525300E92BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Selfie/Info.plist;
@@ -391,6 +524,7 @@
 		};
 		77F9FE5A1ECF525300E92BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SelfieTests/Info.plist;
@@ -403,6 +537,7 @@
 		};
 		77F9FE5B1ECF525300E92BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SelfieTests/Info.plist;
@@ -432,6 +567,7 @@
 				77F9FE581ECF525300E92BF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F9FE591ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "SelfieTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +576,7 @@
 				77F9FE5B1ECF525300E92BF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

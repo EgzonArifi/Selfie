@@ -65,6 +65,17 @@
     
     // Initialize Motion Manager
     [self initializeMotionManager];
+    
+   UIPanGestureRecognizer *stickerGesture = [[UIPanGestureRecognizer alloc]
+               initWithTarget:self
+               action:@selector(handlePan:)];
+    [self.stickerImageView addGestureRecognizer:stickerGesture];
+    [self.stickerImageView setUserInteractionEnabled:YES];
+    self.videoContainerView.clipsToBounds = YES;
+    
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
+    [self.stickerImageView addGestureRecognizer:pinchGestureRecognizer];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -370,37 +381,7 @@
     // adjust image orientation
     NSLog(@"orientation: %ld",(long)orientationLast);
     orientationAfterProcess = orientationLast;
-    switch (orientationLast) {
-        case UIInterfaceOrientationPortrait:
-            NSLog(@"UIInterfaceOrientationPortrait");
-            croppedImage = [UIImage imageWithCGImage:imageRef];
-            break;
-            
-        case UIInterfaceOrientationPortraitUpsideDown:
-            NSLog(@"UIInterfaceOrientationPortraitUpsideDown");
-            croppedImage = [[[UIImage alloc] initWithCGImage: imageRef
-                                                       scale: 1.0
-                                                 orientation: UIImageOrientationDown] autorelease];
-            break;
-            
-        case UIInterfaceOrientationLandscapeLeft:
-            NSLog(@"UIInterfaceOrientationLandscapeLeft");
-            croppedImage = [[[UIImage alloc] initWithCGImage: imageRef
-                                                       scale: 1.0
-                                                 orientation: UIImageOrientationRight] autorelease];
-            break;
-            
-        case UIInterfaceOrientationLandscapeRight:
-            NSLog(@"UIInterfaceOrientationLandscapeRight");
-            croppedImage = [[[UIImage alloc] initWithCGImage: imageRef
-                                                       scale: 1.0
-                                                 orientation: UIImageOrientationLeft] autorelease];
-            break;
-            
-        default:
-            croppedImage = [UIImage imageWithCGImage:imageRef];
-            break;
-    }
+    croppedImage = [UIImage imageWithCGImage:imageRef];
     
     CGImageRelease(imageRef);
     
@@ -604,4 +585,22 @@
     } completion:nil];
 }
 
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
+    
+    if (recognizer.state == UIGestureRecognizerStateChanged) {
+        
+        CGPoint center = recognizer.view.center;
+        CGPoint translation = [recognizer translationInView:self.videoContainerView];
+        center = CGPointMake(center.x + translation.x, center.y + translation.y);
+
+        recognizer.view.center = center;
+        
+    }
+    [recognizer setTranslation:CGPointZero inView:recognizer.view];
+}
+-(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
+    self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+    
+    pinchGestureRecognizer.scale = 1.0;
+}
 @end

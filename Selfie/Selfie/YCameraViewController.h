@@ -61,7 +61,8 @@
 
 @property(nonatomic, strong) CameraStickersView *stickersView;
 @property (weak, nonatomic) IBOutlet UIView *stickerContainerView;
-
+@property (weak, nonatomic) IBOutlet UIView *videoContainerView;
+@property (weak, nonatomic) IBOutlet UIImageView *stickerImageView;
 @end
 
 @protocol YCameraViewControllerDelegate
