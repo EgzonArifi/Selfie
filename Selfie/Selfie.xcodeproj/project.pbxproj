@@ -20,6 +20,7 @@
 		77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE661ECFA9D400E92BF7 /* StickerCell.m */; };
 		77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */; };
 		77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */; };
+		77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE701ED05D8400E92BF7 /* HomeController.m */; };
 		FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
 		77F9FE6A1ED0530300E92BF7 /* EAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAAlertView.h; sourceTree = "<group>"; };
 		77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAAlertView.m; sourceTree = "<group>"; };
+		77F9FE6F1ED05D8400E92BF7 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		77F9FE701ED05D8400E92BF7 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,11 +118,11 @@
 		77F9FE361ECF525300E92BF7 /* Selfie */ = {
 			isa = PBXGroup;
 			children = (
-				77F9FE6A1ED0530300E92BF7 /* EAAlertView.h */,
-				77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */,
 				77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */,
 				77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */,
+				77F9FE6E1ED05D6200E92BF7 /* Home */,
 				77F9FE5F1ECF535000E92BF7 /* Camera */,
+				77F9FE6D1ED05D4B00E92BF7 /* Utils */,
 				77F9FE401ECF525300E92BF7 /* Main.storyboard */,
 				77F9FE431ECF525300E92BF7 /* Assets.xcassets */,
 				77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */,
@@ -159,6 +162,24 @@
 				77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */,
 			);
 			name = Camera;
+			sourceTree = "<group>";
+		};
+		77F9FE6D1ED05D4B00E92BF7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77F9FE6A1ED0530300E92BF7 /* EAAlertView.h */,
+				77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		77F9FE6E1ED05D6200E92BF7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				77F9FE6F1ED05D8400E92BF7 /* HomeController.h */,
+				77F9FE701ED05D8400E92BF7 /* HomeController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		8F3D59119A47B3425017F39C /* Pods */ = {
@@ -374,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */,
+				77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */,
 				77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
 				77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */,
