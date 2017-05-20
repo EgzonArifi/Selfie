@@ -23,6 +23,7 @@
 		77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE701ED05D8400E92BF7 /* HomeController.m */; };
 		77F9FE741ED0699700E92BF7 /* CandidateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE731ED0699700E92BF7 /* CandidateCell.m */; };
 		77F9FE761ED06D2400E92BF7 /* CSGrowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE751ED06D2400E92BF7 /* CSGrowHeader.xib */; };
+		77F9FE791ED0770000E92BF7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE781ED0770000E92BF7 /* SliderCell.m */; };
 		FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		77F9FE721ED0699700E92BF7 /* CandidateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateCell.h; sourceTree = "<group>"; };
 		77F9FE731ED0699700E92BF7 /* CandidateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateCell.m; sourceTree = "<group>"; };
 		77F9FE751ED06D2400E92BF7 /* CSGrowHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSGrowHeader.xib; sourceTree = "<group>"; };
+		77F9FE771ED0770000E92BF7 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		77F9FE781ED0770000E92BF7 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
 		84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				77F9FE751ED06D2400E92BF7 /* CSGrowHeader.xib */,
+				77F9FE771ED0770000E92BF7 /* SliderCell.h */,
+				77F9FE781ED0770000E92BF7 /* SliderCell.m */,
 				77F9FE6F1ED05D8400E92BF7 /* HomeController.h */,
 				77F9FE701ED05D8400E92BF7 /* HomeController.m */,
 				77F9FE721ED0699700E92BF7 /* CandidateCell.h */,
@@ -410,6 +415,7 @@
 				77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */,
 				77F9FE391ECF525300E92BF7 /* main.m in Sources */,
 				77F9FE621ECF6E3000E92BF7 /* CameraStickersView.m in Sources */,
+				77F9FE791ED0770000E92BF7 /* SliderCell.m in Sources */,
 				77F9FE741ED0699700E92BF7 /* CandidateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

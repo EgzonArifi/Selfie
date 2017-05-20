@@ -28,7 +28,7 @@
     
     [self.collectionView registerNib:self.headerNib
           forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
-                 withReuseIdentifier:@"header"];
+                 withReuseIdentifier:@"SliderCell"];
 }
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -78,7 +78,7 @@
  
     if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
         UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                                            withReuseIdentifier:@"header"
+                                                                            withReuseIdentifier:@"SliderCell"
                                                                                    forIndexPath:indexPath];
         
         return cell;
