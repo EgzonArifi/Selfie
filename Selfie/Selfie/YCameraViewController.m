@@ -69,9 +69,11 @@
     [self initializeMotionManager];
     
     [self.stickerImageView setUserInteractionEnabled:YES];
-    [self.stickerImageView enableDragging];
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
+    [self.stickerImageView addGestureRecognizer:panGestureRecognizer];
+    /*[self.stickerImageView enableDragging];
     [self.stickerImageView setCagingArea:CGRectMake(-50, -50, self.videoContainerView.bounds.size.width+100, self.videoContainerView.bounds.size.height+100)];
-    self.videoContainerView.clipsToBounds = YES;
+    self.videoContainerView.clipsToBounds = YES;*/
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
     [self.stickerImageView addGestureRecognizer:pinchGestureRecognizer];
@@ -590,6 +592,22 @@
     } completion:nil];
 }
 
+-(void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)pgr{
+    CGPoint point = [pgr locationInView:self.videoContainerView];
+
+    CGRect boundsRect = CGRectMake(-50, -50,self.videoContainerView.bounds.size.width+50,
+                                   self.videoContainerView.bounds.size.height+50);
+    if (pgr.state == UIGestureRecognizerStateChanged) {
+        
+        if (CGRectContainsPoint(boundsRect, point)) {
+            CGPoint center = pgr.view.center;
+            CGPoint translation = [pgr translationInView:pgr.view];
+            center = CGPointMake(center.x + translation.x, center.y + translation.y);
+            self.stickerImageView.center = point;
+        }
+    }
+    [pgr setTranslation:CGPointZero inView:pgr.view];
+}
 -(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
     self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
     

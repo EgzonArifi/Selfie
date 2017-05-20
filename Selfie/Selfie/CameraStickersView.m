@@ -19,9 +19,11 @@
                                     options:nil];
         self.mainView.frame = self.frame;
         
-        UINib *nib = [UINib nibWithNibName:@"StickerCell" bundle: nil];
-        [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"StickerCell"];
-        self.stickers = @[@"sticker1",@"sticker2",@"sticker3",@"sticker4"];
+        [self.collectionView registerNib:[UINib nibWithNibName:@"StickerCell" bundle: nil]
+              forCellWithReuseIdentifier:@"StickerCell"];
+        
+        self.stickers = @[@"isa_mustafa",@"sticker1",@"sticker2",@"sticker3",@"sticker4"];
+        
         [self addSubview:self.mainView];
     }
     return self;
