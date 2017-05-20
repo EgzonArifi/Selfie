@@ -630,7 +630,18 @@
         }
     }];
 }
-
+- (IBAction)postToInstagram:(id)sender {
+    [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
+        NSString *textToShare = @"#LdkAkr";
+        
+        NSArray *objectsToShare = @[textToShare, image];
+        
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+        
+        
+        [self presentViewController:activityVC animated:YES completion:nil];
+    }];
+}
 - (IBAction)postToTwitter:(id)sender {
     [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
         if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
