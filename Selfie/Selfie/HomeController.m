@@ -7,6 +7,7 @@
 //
 
 #import "HomeController.h"
+#import "YCameraViewController.h"
 
 @interface HomeController ()
 
@@ -18,5 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+-(IBAction)goToStickerCamera:(id)sender {
+    [self.navigationController presentViewController:[[YCameraViewController alloc] init]
+                                            animated:YES
+                                          completion:nil];
+}
 @end

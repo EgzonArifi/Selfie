@@ -31,6 +31,18 @@
     return self;
 }
 
+- (instancetype)init
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
+                                                         bundle:[NSBundle mainBundle]];
+    
+    self = [storyboard instantiateViewControllerWithIdentifier:@"YCameraViewController"];
+    
+    if(self) {
+        //default initialization
+    }
+    return  self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -85,7 +97,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

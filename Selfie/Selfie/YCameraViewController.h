@@ -44,6 +44,9 @@
     AVCaptureStillImageOutput *stillImageOutput;
     UIImage *croppedImageWithoutOrientation;
 }
+
+- (instancetype)init;
+
 @property (nonatomic, readwrite) BOOL dontAllowResetRestaurant;
 @property (nonatomic, assign) id delegate;
 
@@ -69,4 +72,5 @@
 - (void)didFinishPickingImage:(UIImage *)image;
 - (void)yCameraControllerDidCancel;
 - (void)yCameraControllerdidSkipped;
+
 @end
