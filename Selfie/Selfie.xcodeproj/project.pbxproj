@@ -27,7 +27,6 @@
 		77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */; };
 		77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */; };
 		77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE701ED05D8400E92BF7 /* HomeController.m */; };
-		77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */; };
 		77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE881ED19B7600E92BF7 /* SliderCell.m */; };
 		77F9FE8B1ED19B7600E92BF7 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE891ED19B7600E92BF7 /* SliderCell.xib */; };
 		FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */; };
@@ -81,8 +80,6 @@
 		77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAAlertView.m; sourceTree = "<group>"; };
 		77F9FE6F1ED05D8400E92BF7 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		77F9FE701ED05D8400E92BF7 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
-		77F9FE841ED0D96900E92BF7 /* SRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCarouselView.h; sourceTree = "<group>"; };
-		77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCarouselView.m; sourceTree = "<group>"; };
 		77F9FE871ED19B7600E92BF7 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
 		77F9FE881ED19B7600E92BF7 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
 		77F9FE891ED19B7600E92BF7 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
@@ -222,8 +219,6 @@
 			children = (
 				7730C0C01ED2148300EDC04B /* Alert View */,
 				7730C0B11ED1D29A00EDC04B /* JsonLoader */,
-				77F9FE841ED0D96900E92BF7 /* SRCarouselView.h */,
-				77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -465,7 +460,6 @@
 				77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */,
 				7730C0B01ED1CB1900EDC04B /* CandidateModel.m in Sources */,
 				7730C0B41ED1D2B100EDC04B /* JsonLoader.m in Sources */,
-				77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */,
 				77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */,
 				7730C0BE1ED205E400EDC04B /* CandidateCell.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
