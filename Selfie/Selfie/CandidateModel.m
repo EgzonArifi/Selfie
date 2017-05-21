@@ -14,6 +14,7 @@ NSString *const kCandidateModelImages = @"images";
 NSString *const kCandidateModelName = @"name";
 
 @interface CandidateModel ()
+
 @end
 
 @implementation CandidateModel
@@ -33,6 +34,7 @@ NSString *const kCandidateModelName = @"name";
     }
     return self;
 }
+
 + (void)loadCandidates:(void (^)(NSArray *candidatesArray))completion {
     NSMutableArray *array = [NSMutableArray new];
     for (NSDictionary *attributes in [JsonLoader loadJsonFromFile:@"candidates"]) {
@@ -53,4 +55,5 @@ NSString *const kCandidateModelName = @"name";
     NSArray *candidates = [array filteredArrayUsingPredicate:prediacte];
     completion(candidates);
 }
+
 @end

@@ -11,6 +11,7 @@
 
 @implementation CameraStickersView
 
+#pragma mark - Init
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -51,5 +52,6 @@
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     return CGSizeMake(self.collectionView.frame.size.height, self.collectionView.frame.size.height);
- }
+}
+
 @end

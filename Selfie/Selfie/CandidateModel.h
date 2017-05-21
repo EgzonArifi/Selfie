@@ -18,4 +18,5 @@
 
 + (void)loadCandidates:(void (^)(NSArray *candidatesArray))completion;
 + (void)searchCandidate:(NSString *)text results:(void (^)(NSArray *candidatesArray))completion;
+
 @end

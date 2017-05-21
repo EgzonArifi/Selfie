@@ -13,9 +13,10 @@
 
 @interface SearchController ()<UISearchBarDelegate>
 
+@property(weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @property(nonatomic, strong) UISearchBar *searchBar;
 @property(strong, nonatomic) NSArray *candidates;
-@property(weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -25,7 +26,8 @@
     [super viewDidLoad];
     
     [self addSearchBar];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"CandidateCell" bundle:nil] forCellWithReuseIdentifier:@"CandidateCell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CandidateCell" bundle:nil]
+          forCellWithReuseIdentifier:@"CandidateCell"];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -38,27 +40,26 @@
     self = [storyboard instantiateViewControllerWithIdentifier:@"SearchController"];
     
     if(self) {
-        //default initialization
+        
     }
     return  self;
 }
 
 #pragma mark - Search
 - (void)addSearchBar {
-    self.searchBar = [[UISearchBar alloc]
-                      initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * 0.5, 20)];
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * 0.5, 20)];
     self.searchBar.placeholder = NSLocalizedString(@"Kërko", nil);
     self.searchBar.showsCancelButton = YES;
     self.searchBar.delegate = self;
     self.navigationItem.titleView = self.searchBar;
     UITextField *textField = [self.searchBar valueForKey:@"_searchField"];
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [searchBar endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [CandidateModel searchCandidate:searchText results:^(NSArray *candidatesArray) {
         self.candidates = candidatesArray;
@@ -70,6 +71,7 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.candidates.count;
 }
@@ -84,6 +86,7 @@
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(5, 2.5, 5, 2.5);
 }
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self.navigationController presentViewController:[[YCameraViewController alloc] init]
                                             animated:YES
@@ -95,4 +98,5 @@
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.collectionView.frame.size.width/2.1, self.collectionView.frame.size.width/2.1);
 }
+
 @end
