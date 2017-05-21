@@ -39,12 +39,18 @@ NSString *const kCandidateModelName = @"name";
         CandidateModel *candidate = [[CandidateModel alloc] initWithDictionary:attributes];
         [array addObject:candidate];
     }
-    
-    NSPredicate *applePred = [NSPredicate predicateWithFormat:
-                              @"name CONTAINS[cd] 'Is'"];
-    NSArray *appleEmployees = [array filteredArrayUsingPredicate:applePred];
-    CandidateModel *mod = appleEmployees.firstObject;
-    NSLog(@"%@",mod.name);
     completion(array);
+}
++ (void)searchCandidate:(NSString *)text results:(void (^)(NSArray *candidatesArray))completion {
+    NSMutableArray *array = [NSMutableArray new];
+    for (NSDictionary *attributes in [JsonLoader loadJsonFromFile:@"candidates"]) {
+        CandidateModel *candidate = [[CandidateModel alloc] initWithDictionary:attributes];
+        [array addObject:candidate];
+    }
+    
+    NSPredicate *prediacte = [NSPredicate predicateWithFormat:
+                              @"name CONTAINS[cd] %@",text];
+    NSArray *candidates = [array filteredArrayUsingPredicate:prediacte];
+    completion(candidates);
 }
 @end

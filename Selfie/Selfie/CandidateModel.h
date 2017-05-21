@@ -10,12 +10,12 @@
 
 @interface CandidateModel : NSObject
 
-@property (nonatomic, assign) NSString *number;
-@property (nonatomic, strong) NSArray * images;
-@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString *number;
+@property (nonatomic, strong) NSArray *images;
+@property (nonatomic, strong) NSString *name;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 + (void)loadCandidates:(void (^)(NSArray *candidatesArray))completion;
-
++ (void)searchCandidate:(NSString *)text results:(void (^)(NSArray *candidatesArray))completion;
 @end

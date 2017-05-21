@@ -11,6 +11,9 @@
 		7730C0B01ED1CB1900EDC04B /* CandidateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */; };
 		7730C0B41ED1D2B100EDC04B /* JsonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0B31ED1D2B100EDC04B /* JsonLoader.m */; };
 		7730C0B61ED1D4E000EDC04B /* candidates.json in Resources */ = {isa = PBXBuildFile; fileRef = 7730C0B51ED1D4E000EDC04B /* candidates.json */; };
+		7730C0BA1ED1DD8E00EDC04B /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0B91ED1DD8E00EDC04B /* SearchController.m */; };
+		7730C0BE1ED205E400EDC04B /* CandidateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0BC1ED205E400EDC04B /* CandidateCell.m */; };
+		7730C0BF1ED205E400EDC04B /* CandidateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7730C0BD1ED205E400EDC04B /* CandidateCell.xib */; };
 		77F9FE391ECF525300E92BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE381ECF525300E92BF7 /* main.m */; };
 		77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */; };
 		77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE401ECF525300E92BF7 /* Main.storyboard */; };
@@ -24,7 +27,6 @@
 		77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */; };
 		77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */; };
 		77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE701ED05D8400E92BF7 /* HomeController.m */; };
-		77F9FE741ED0699700E92BF7 /* CandidateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE731ED0699700E92BF7 /* CandidateCell.m */; };
 		77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */; };
 		77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE881ED19B7600E92BF7 /* SliderCell.m */; };
 		77F9FE8B1ED19B7600E92BF7 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE891ED19B7600E92BF7 /* SliderCell.xib */; };
@@ -51,6 +53,11 @@
 		7730C0B21ED1D2B100EDC04B /* JsonLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonLoader.h; sourceTree = "<group>"; };
 		7730C0B31ED1D2B100EDC04B /* JsonLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonLoader.m; sourceTree = "<group>"; };
 		7730C0B51ED1D4E000EDC04B /* candidates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = candidates.json; sourceTree = "<group>"; };
+		7730C0B81ED1DD8E00EDC04B /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		7730C0B91ED1DD8E00EDC04B /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
+		7730C0BB1ED205E400EDC04B /* CandidateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateCell.h; sourceTree = "<group>"; };
+		7730C0BC1ED205E400EDC04B /* CandidateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateCell.m; sourceTree = "<group>"; };
+		7730C0BD1ED205E400EDC04B /* CandidateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CandidateCell.xib; sourceTree = "<group>"; };
 		77F9FE341ECF525300E92BF7 /* Selfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,8 +81,6 @@
 		77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAAlertView.m; sourceTree = "<group>"; };
 		77F9FE6F1ED05D8400E92BF7 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		77F9FE701ED05D8400E92BF7 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
-		77F9FE721ED0699700E92BF7 /* CandidateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateCell.h; sourceTree = "<group>"; };
-		77F9FE731ED0699700E92BF7 /* CandidateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateCell.m; sourceTree = "<group>"; };
 		77F9FE841ED0D96900E92BF7 /* SRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCarouselView.h; sourceTree = "<group>"; };
 		77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCarouselView.m; sourceTree = "<group>"; };
 		77F9FE871ED19B7600E92BF7 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
@@ -123,6 +128,15 @@
 			name = JsonLoader;
 			sourceTree = "<group>";
 		};
+		7730C0B71ED1DD7100EDC04B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7730C0B81ED1DD8E00EDC04B /* SearchController.h */,
+				7730C0B91ED1DD8E00EDC04B /* SearchController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		77F9FE2B1ECF525300E92BF7 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +162,7 @@
 			children = (
 				77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */,
 				77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */,
+				7730C0B71ED1DD7100EDC04B /* Search */,
 				77F9FE6E1ED05D6200E92BF7 /* Home */,
 				77F9FE5F1ECF535000E92BF7 /* Camera */,
 				77F9FE6D1ED05D4B00E92BF7 /* Utils */,
@@ -210,13 +225,14 @@
 			children = (
 				77F9FE6F1ED05D8400E92BF7 /* HomeController.h */,
 				77F9FE701ED05D8400E92BF7 /* HomeController.m */,
-				77F9FE721ED0699700E92BF7 /* CandidateCell.h */,
-				77F9FE731ED0699700E92BF7 /* CandidateCell.m */,
 				77F9FE871ED19B7600E92BF7 /* SliderCell.h */,
 				77F9FE881ED19B7600E92BF7 /* SliderCell.m */,
 				77F9FE891ED19B7600E92BF7 /* SliderCell.xib */,
 				7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */,
 				7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */,
+				7730C0BB1ED205E400EDC04B /* CandidateCell.h */,
+				7730C0BC1ED205E400EDC04B /* CandidateCell.m */,
+				7730C0BD1ED205E400EDC04B /* CandidateCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -325,6 +341,7 @@
 				77F9FE441ECF525300E92BF7 /* Assets.xcassets in Resources */,
 				77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */,
 				77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */,
+				7730C0BF1ED205E400EDC04B /* CandidateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,11 +459,12 @@
 				7730C0B41ED1D2B100EDC04B /* JsonLoader.m in Sources */,
 				77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */,
 				77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */,
+				7730C0BE1ED205E400EDC04B /* CandidateCell.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
 				77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */,
+				7730C0BA1ED1DD8E00EDC04B /* SearchController.m in Sources */,
 				77F9FE391ECF525300E92BF7 /* main.m in Sources */,
 				77F9FE621ECF6E3000E92BF7 /* CameraStickersView.m in Sources */,
-				77F9FE741ED0699700E92BF7 /* CandidateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

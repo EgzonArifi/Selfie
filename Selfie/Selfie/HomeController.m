@@ -11,9 +11,12 @@
 #import "CandidateCell.h"
 #import "SliderCell.h"
 #import "CandidateModel.h"
+#import "SearchController.h"
 
 @interface HomeController ()
+
 @property (strong, nonatomic) NSArray *candidates;
+
 @end
 
 @implementation HomeController
@@ -22,18 +25,25 @@
     [super viewDidLoad];
     
     [self.search setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.search.bounds.size.height)];
-    
     [CandidateModel loadCandidates:^(NSArray *candidatesArray) {
         self.candidates = candidatesArray;
     }];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"SliderCell" bundle:nil] forCellWithReuseIdentifier:@"SliderCell"];
-    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CandidateCell" bundle:nil] forCellWithReuseIdentifier:@"CandidateCell"];
 }
 - (IBAction)goToStickerCamera:(id)sender {
     [self.navigationController presentViewController:[[YCameraViewController alloc] init]
                                             animated:YES
                                           completion:nil];
+}
+- (IBAction)goToSearch:(id)sender {
+    UINavigationController *navigationController =
+    (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"searchNavigation"];
+    
+    [self presentViewController:navigationController
+                       animated:YES
+                     completion:nil];
 }
 
 #pragma mark - CollectionView Delegate and Datasource
@@ -60,18 +70,6 @@
         return cell;
     }
 }
-
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    
-    /*if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
-     SliderCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-     withReuseIdentifier:@"SliderCell"
-     forIndexPath:indexPath];
-     [cell loadSlider];
-     return cell;
-     }*/
-    return nil;
-}
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     if (section == 0) {
         return UIEdgeInsetsMake(0, 0, 0, 0);
@@ -79,6 +77,7 @@
     return UIEdgeInsetsMake(5, 2.5, 5, 2.5);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self goToStickerCamera:nil];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
