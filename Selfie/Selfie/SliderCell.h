@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SliderCell : UICollectionViewCell
-
+- (void)layoutCell;
 @end

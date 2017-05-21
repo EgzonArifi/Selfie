@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.search setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.search.bounds.size.height)];
     self.candidates = @[@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti"];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"SliderCell" bundle:nil] forCellWithReuseIdentifier:@"SliderCell"];
@@ -46,7 +47,7 @@
     if (indexPath.section == 0) {
         SliderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SliderCell"
                                                                      forIndexPath:indexPath];
-//        [cell loadSlider];
+        [cell layoutCell];
         return cell;
     } else {
         CandidateCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CandidateCell"

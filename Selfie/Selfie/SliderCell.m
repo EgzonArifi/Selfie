@@ -13,7 +13,9 @@
 
 @end
 
-@implementation SliderCell
+@implementation SliderCell {
+    SDCycleScrollView *cycleScrollView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -24,11 +26,10 @@
     NSArray *imageNames = @[@"Slide1",
                             @"Slide1",
                             @"Slide1",
-                            @"Slide1."
-                            ];
-    CGFloat w = self.contentView.bounds.size.width;
+                            @"Slide1."];
+    CGFloat width = self.contentView.bounds.size.width;
     
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, w, w/1.5)
+    cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/1.5)
                                                                   shouldInfiniteLoop:YES imageNamesGroup:imageNames];
     cycleScrollView.delegate = self;
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
@@ -36,5 +37,8 @@
     cycleScrollView.autoScrollTimeInterval = 4.0;
     [self.contentView addSubview:cycleScrollView];
 }
-
+- (void)layoutCell {
+    CGFloat width = self.contentView.bounds.size.width;
+    [cycleScrollView setFrame:CGRectMake(0, 0, width, width/1.5)];
+}
 @end

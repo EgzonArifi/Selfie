@@ -10,4 +10,6 @@
 
 @interface HomeController : UICollectionViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *search;
+
 @end

@@ -1,5 +1,5 @@
 //
-//  PhotoShapViewController.h
+//  YCameraViewController.h
 //  Selfie
 //
 //  Created by Egzon Arifi on 5/18/17.
@@ -66,6 +66,7 @@
 @property (weak, nonatomic) IBOutlet UIView *stickerContainerView;
 @property (weak, nonatomic) IBOutlet UIView *videoContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *stickerImageView;
+@property (weak, nonatomic) IBOutlet UIView *stickerHolderView;
 @end
 
 @protocol YCameraViewControllerDelegate

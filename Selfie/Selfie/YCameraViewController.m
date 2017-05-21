@@ -1,5 +1,5 @@
 //
-//  PhotoShapViewController.m
+//  YCameraViewController.m
 //  Selfie
 //
 //  Created by Egzon Arifi on 5/18/17.
@@ -83,13 +83,13 @@
     
     [self.stickerImageView setUserInteractionEnabled:YES];
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
-    [self.stickerImageView addGestureRecognizer:panGestureRecognizer];
+    [self.stickerHolderView addGestureRecognizer:panGestureRecognizer];
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
-    [self.stickerImageView addGestureRecognizer:pinchGestureRecognizer];
+    [self.stickerHolderView addGestureRecognizer:pinchGestureRecognizer];
     
     UIRotationGestureRecognizer *rotationGestureRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationWithGestureRecognizer:)];
-    [self.stickerImageView addGestureRecognizer:rotationGestureRecognizer];
+    [self.stickerHolderView addGestureRecognizer:rotationGestureRecognizer];
     
 }
 - (void)didSelectSticker:(NSString *)sticker {
@@ -613,18 +613,18 @@
             CGPoint center = pgr.view.center;
             CGPoint translation = [pgr translationInView:pgr.view];
             center = CGPointMake(center.x + translation.x, center.y + translation.y);
-            self.stickerImageView.center = point;
+            self.stickerHolderView.center = point;
         }
     }
     [pgr setTranslation:CGPointZero inView:pgr.view];
 }
 -(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
-    self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+    self.stickerHolderView.transform = CGAffineTransformScale(self.stickerHolderView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
     
     pinchGestureRecognizer.scale = 1.0;
 }
 -(void)handleRotationWithGestureRecognizer:(UIRotationGestureRecognizer *)rotationGestureRecognizer{
-    self.stickerImageView.transform = CGAffineTransformRotate(self.stickerImageView.transform, rotationGestureRecognizer.rotation);
+    self.stickerHolderView.transform = CGAffineTransformRotate(self.stickerHolderView.transform, rotationGestureRecognizer.rotation);
     
     rotationGestureRecognizer.rotation = 0.0;
 }
