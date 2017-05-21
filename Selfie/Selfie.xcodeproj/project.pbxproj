@@ -156,6 +156,27 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		7730C0C21ED214F300EDC04B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7730C0C31ED214F900EDC04B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7730C0C41ED214FE00EDC04B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		77F9FE2B1ECF525300E92BF7 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +200,9 @@
 		77F9FE361ECF525300E92BF7 /* Selfie */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0C41ED214FE00EDC04B /* View */,
+				7730C0C31ED214F900EDC04B /* Model */,
+				7730C0C21ED214F300EDC04B /* Controller */,
 				77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */,
 				77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */,
 				7730C0B71ED1DD7100EDC04B /* Search */,
