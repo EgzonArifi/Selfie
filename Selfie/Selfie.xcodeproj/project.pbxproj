@@ -143,6 +143,19 @@
 			name = "Alert View";
 			sourceTree = "<group>";
 		};
+		7730C0C11ED214C300EDC04B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7730C0BB1ED205E400EDC04B /* CandidateCell.h */,
+				7730C0BC1ED205E400EDC04B /* CandidateCell.m */,
+				7730C0BD1ED205E400EDC04B /* CandidateCell.xib */,
+				77F9FE871ED19B7600E92BF7 /* SliderCell.h */,
+				77F9FE881ED19B7600E92BF7 /* SliderCell.m */,
+				77F9FE891ED19B7600E92BF7 /* SliderCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		77F9FE2B1ECF525300E92BF7 = {
 			isa = PBXGroup;
 			children = (
@@ -226,16 +239,11 @@
 		77F9FE6E1ED05D6200E92BF7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0C11ED214C300EDC04B /* Cells */,
 				77F9FE6F1ED05D8400E92BF7 /* HomeController.h */,
 				77F9FE701ED05D8400E92BF7 /* HomeController.m */,
-				77F9FE871ED19B7600E92BF7 /* SliderCell.h */,
-				77F9FE881ED19B7600E92BF7 /* SliderCell.m */,
-				77F9FE891ED19B7600E92BF7 /* SliderCell.xib */,
 				7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */,
 				7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */,
-				7730C0BB1ED205E400EDC04B /* CandidateCell.h */,
-				7730C0BC1ED205E400EDC04B /* CandidateCell.m */,
-				7730C0BD1ED205E400EDC04B /* CandidateCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
