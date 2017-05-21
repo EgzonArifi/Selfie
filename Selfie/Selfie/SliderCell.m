@@ -30,7 +30,7 @@
     CGFloat width = self.contentView.bounds.size.width;
     
     cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/1.5)
-                                                                  shouldInfiniteLoop:YES imageNamesGroup:imageNames];
+                                               shouldInfiniteLoop:YES imageNamesGroup:imageNames];
     cycleScrollView.delegate = self;
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
     cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;

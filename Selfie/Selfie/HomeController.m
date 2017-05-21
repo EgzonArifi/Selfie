@@ -25,6 +25,7 @@
     [super viewDidLoad];
     
     [self.search setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.search.bounds.size.height)];
+    
     [CandidateModel loadCandidates:^(NSArray *candidatesArray) {
         self.candidates = candidatesArray;
     }];
@@ -50,6 +51,7 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
 }
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
         return 1;
@@ -70,12 +72,14 @@
         return cell;
     }
 }
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     if (section == 0) {
         return UIEdgeInsetsMake(0, 0, 0, 0);
     }
     return UIEdgeInsetsMake(5, 2.5, 5, 2.5);
 }
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self goToStickerCamera:nil];
 }

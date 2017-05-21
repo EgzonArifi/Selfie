@@ -18,13 +18,13 @@
     UIInterfaceOrientation orientationLast, orientationAfterProcess;
     CMMotionManager *motionManager;
 }
+
 @end
 
 @implementation YCameraViewController
 @synthesize delegate;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -32,8 +32,7 @@
     return self;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
                                                          bundle:[NSBundle mainBundle]];
     
@@ -44,8 +43,7 @@
     }
     return  self;
 }
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     //    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
@@ -79,8 +77,6 @@
     [self initializeMotionManager];
     
     [self.stickerImageView setUserInteractionEnabled:YES];
-//    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
-//    [self.stickerHolderView addGestureRecognizer:panGestureRecognizer];
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
     [self.videoContainerView addGestureRecognizer:pinchGestureRecognizer];
@@ -92,15 +88,15 @@
 - (void)didSelectSticker:(NSString *)sticker {
     [self.stickerImageView setImage:[UIImage imageNamed:sticker]];
 }
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (initializeCamera){
+    if (initializeCamera) {
         initializeCamera = NO;
         
         // Initialize camera
@@ -120,8 +116,7 @@
     //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
--(void) dealloc
-{
+-(void) dealloc {
     [_imagePreview release];
     [_captureImage release];
     [imgPicker release];
@@ -138,7 +133,7 @@
 }
 
 #pragma mark - CoreMotion Task
-- (void)initializeMotionManager{
+- (void)initializeMotionManager {
     motionManager = [[CMMotionManager alloc] init];
     motionManager.accelerometerUpdateInterval = .2;
     motionManager.gyroUpdateInterval = .2;
@@ -156,7 +151,7 @@
 
 #pragma mark - UIAccelerometer callback
 
-- (void)outputAccelertionData:(CMAcceleration)acceleration{
+- (void)outputAccelertionData:(CMAcceleration)acceleration {
     UIInterfaceOrientation orientationNew;
     
     if (acceleration.x >= 0.75) {
@@ -185,7 +180,7 @@
 }
 
 #ifdef DEBUG
-+(NSString*)orientationToText:(const UIInterfaceOrientation)ORIENTATION {
++ (NSString*)orientationToText:(const UIInterfaceOrientation)ORIENTATION {
     switch (ORIENTATION) {
         case UIInterfaceOrientationPortrait:
             return @"UIInterfaceOrientationPortrait";
@@ -205,7 +200,7 @@
 #pragma mark - Camera Initialization
 
 //AVCaptureSession to show live video feed in view
-- (void) initializeCamera {
+- (void)initializeCamera {
     if (session)
         [session release], session=nil;
     
@@ -272,8 +267,7 @@
             [backCamera unlockForConfiguration];
             
             [self.flashToggleButton setEnabled:YES];
-        }
-        else{
+        } else {
             if ([backCamera isFlashModeSupported:AVCaptureFlashModeOff]) {
                 [backCamera lockForConfiguration:nil];
                 [backCamera setFlashMode:AVCaptureFlashModeOff];
@@ -327,8 +321,7 @@
         self.captureImage.hidden = NO; //show the captured image view
         self.imagePreview.hidden = YES; //hide the live video feed
         [self capImage];
-    }
-    else {
+    } else {
         self.captureImage.hidden = YES;
         self.imagePreview.hidden = NO;
         haveImage = NO;
@@ -363,8 +356,7 @@
     }];
 }
 
-- (UIImage*)imageWithImage:(UIImage *)sourceImage scaledToWidth:(float) i_width
-{
+- (UIImage*)imageWithImage:(UIImage *)sourceImage scaledToWidth:(float) i_width {
     float oldWidth = sourceImage.size.width;
     float scaleFactor = i_width / oldWidth;
     
@@ -418,7 +410,7 @@
     [self setCapturedImage];
 }
 
-- (void)setCapturedImage{
+- (void)setCapturedImage {
     // Stop capturing image
     [session stopRunning];
     
@@ -427,14 +419,14 @@
 }
 
 #pragma mark - Device Availability Controls
-- (void)disableCameraDeviceControls{
+- (void)disableCameraDeviceControls {
     self.cameraToggleButton.enabled = NO;
     self.flashToggleButton.enabled = NO;
     self.photoCaptureButton.enabled = NO;
 }
 
 #pragma mark - UIImagePicker Delegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     if (info) {
         photoFromCam = NO;
         
@@ -455,13 +447,13 @@
     }
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     initializeCamera = YES;
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Button clicks
--(IBAction)switchToLibrary:(id)sender {
+- (IBAction)switchToLibrary:(id)sender {
     
     if (session) {
         [session stopRunning];
@@ -476,7 +468,7 @@
     [self presentViewController:imgPicker animated:YES completion:NULL];
 }
 
-- (IBAction)skipped:(id)sender{
+- (IBAction)skipped:(id)sender {
     
     if ([delegate respondsToSelector:@selector(yCameraControllerdidSkipped)]) {
         [delegate yCameraControllerdidSkipped];
@@ -495,7 +487,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)donePhotoCapture:(id)sender{
+- (IBAction)donePhotoCapture:(id)sender {
     
     if ([delegate respondsToSelector:@selector(didFinishPickingImage:)]) {
         [delegate didFinishPickingImage:self.captureImage.image];
@@ -505,7 +497,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)retakePhoto:(id)sender{
+- (IBAction)retakePhoto:(id)sender {
     [self.photoCaptureButton setEnabled:YES];
     self.captureImage.image = nil;
     self.imagePreview.hidden = NO;
@@ -576,7 +568,7 @@
 }
 
 #pragma mark - UI Control Helpers
-- (void)hideControllers{
+- (void)hideControllers {
     [UIView animateWithDuration:0.0 animations:^{
         //1)animate them out of screen
         self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y+116.0);
@@ -589,7 +581,7 @@
     } completion:nil];
 }
 
-- (void)showControllers{
+- (void)showControllers {
     [UIView animateWithDuration:0.2 animations:^{
         //1)animate them into screen
         self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y-116.0);
@@ -603,7 +595,7 @@
 }
 
 #pragma mark - Gestures
--(void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)pgr{
+-(void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)pgr {
     CGPoint point = [pgr locationInView:self.videoContainerView];
     
     CGRect boundsRect = CGRectMake(-50, -50,self.videoContainerView.bounds.size.width+50,
@@ -619,10 +611,10 @@
     }
     [pgr setTranslation:CGPointZero inView:pgr.view];
 }
--(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGesture{
-//    self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
-//    
-//    pinchGestureRecognizer.scale = 1.0;
+- (void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGesture {
+    //    self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+    //
+    //    pinchGestureRecognizer.scale = 1.0;
     if (UIGestureRecognizerStateBegan == pinchGesture.state ||
         UIGestureRecognizerStateChanged == pinchGesture.state) {
         
@@ -654,7 +646,7 @@
         pinchGesture.scale = 1;
     }
 }
--(void)handleRotationWithGestureRecognizer:(UIRotationGestureRecognizer *)rotationGestureRecognizer{
+- (void)handleRotationWithGestureRecognizer:(UIRotationGestureRecognizer *)rotationGestureRecognizer {
     self.stickerImageView.transform = CGAffineTransformRotate(self.stickerImageView.transform, rotationGestureRecognizer.rotation);
     
     rotationGestureRecognizer.rotation = 0.0;
@@ -709,12 +701,12 @@
         }
     }];
 }
-- (void) imageWithView:(UIView *)view completion:(void (^)(UIImage *image))block
-{
+- (void) imageWithView:(UIView *)view completion:(void (^)(UIImage *image))block {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0f);
     [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:NO];
     UIImage * snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     block(snapshotImage);
 }
+
 @end

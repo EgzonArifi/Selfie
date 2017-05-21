@@ -10,6 +10,6 @@
 
 @interface JsonLoader : NSObject
 
-+ (NSDictionary * _Nonnull )loadJsonFromFile:( NSString * _Nonnull )fileName;
++ (NSDictionary *_Nonnull)loadJsonFromFile:( NSString * _Nonnull )fileName;
 
 @end
