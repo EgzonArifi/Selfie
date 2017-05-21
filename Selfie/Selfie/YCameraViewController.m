@@ -10,6 +10,7 @@
 #import <ImageIO/ImageIO.h>
 #import <Social/Social.h>
 #import "EAAlertView.h"
+#import "UIView+draggable.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
@@ -51,10 +52,6 @@
     //        self.edgesForExtendedLayout = UIRectEdgeNone;
     //    }
     
-    self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
-    self.stickersView.delegate = self;
-    [self.stickerContainerView addSubview:self.stickersView];
-    
     self.navigationController.navigationBarHidden = YES;
     [self.navigationController setNavigationBarHidden:YES];
     
@@ -82,14 +79,14 @@
     [self initializeMotionManager];
     
     [self.stickerImageView setUserInteractionEnabled:YES];
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
-    [self.stickerHolderView addGestureRecognizer:panGestureRecognizer];
+//    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
+//    [self.stickerHolderView addGestureRecognizer:panGestureRecognizer];
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchWithGestureRecognizer:)];
-    [self.stickerHolderView addGestureRecognizer:pinchGestureRecognizer];
+    [self.videoContainerView addGestureRecognizer:pinchGestureRecognizer];
     
     UIRotationGestureRecognizer *rotationGestureRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationWithGestureRecognizer:)];
-    [self.stickerHolderView addGestureRecognizer:rotationGestureRecognizer];
+    [self.videoContainerView addGestureRecognizer:rotationGestureRecognizer];
     
 }
 - (void)didSelectSticker:(NSString *)sticker {
@@ -109,7 +106,11 @@
         // Initialize camera
         [self initializeCamera];
     }
-    
+    [self.stickerHolderView enableDragging];
+    self.stickerHolderView.cagingArea =  CGRectMake(0, 0, self.zoneToDrag.frame.size.width,self.zoneToDrag.frame.size.height);
+    self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
+    self.stickersView.delegate = self;
+    [self.stickerContainerView addSubview:self.stickersView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -618,13 +619,43 @@
     }
     [pgr setTranslation:CGPointZero inView:pgr.view];
 }
--(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGestureRecognizer{
-    self.stickerHolderView.transform = CGAffineTransformScale(self.stickerHolderView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
-    
-    pinchGestureRecognizer.scale = 1.0;
+-(void)handlePinchWithGestureRecognizer:(UIPinchGestureRecognizer *)pinchGesture{
+//    self.stickerImageView.transform = CGAffineTransformScale(self.stickerImageView.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);
+//    
+//    pinchGestureRecognizer.scale = 1.0;
+    if (UIGestureRecognizerStateBegan == pinchGesture.state ||
+        UIGestureRecognizerStateChanged == pinchGesture.state) {
+        
+        // Use the x or y scale, they should be the same for typical zooming (non-skewing)
+        float currentScale = [[self.stickerImageView.layer valueForKeyPath:@"transform.scale.x"] floatValue];
+        
+        // Variables to adjust the max/min values of zoom
+        float minScale = 0.3;
+        float maxScale = 3.0;
+        float zoomSpeed = .5;
+        
+        float deltaScale = pinchGesture.scale;
+        
+        // You need to translate the zoom to 0 (origin) so that you
+        // can multiply a speed factor and then translate back to "zoomSpace" around 1
+        deltaScale = ((deltaScale - 1) * zoomSpeed) + 1;
+        
+        // Limit to min/max size (i.e maxScale = 2, current scale = 2, 2/2 = 1.0)
+        //  A deltaScale is ~0.99 for decreasing or ~1.01 for increasing
+        //  A deltaScale of 1.0 will maintain the zoom size
+        deltaScale = MIN(deltaScale, maxScale / currentScale);
+        deltaScale = MAX(deltaScale, minScale / currentScale);
+        
+        CGAffineTransform zoomTransform = CGAffineTransformScale(self.stickerImageView.transform, deltaScale, deltaScale);
+        self.stickerImageView.transform = zoomTransform;
+        
+        // Reset to 1 for scale delta's
+        //  Note: not 0, or we won't see a size: 0 * width = 0
+        pinchGesture.scale = 1;
+    }
 }
 -(void)handleRotationWithGestureRecognizer:(UIRotationGestureRecognizer *)rotationGestureRecognizer{
-    self.stickerHolderView.transform = CGAffineTransformRotate(self.stickerHolderView.transform, rotationGestureRecognizer.rotation);
+    self.stickerImageView.transform = CGAffineTransformRotate(self.stickerImageView.transform, rotationGestureRecognizer.rotation);
     
     rotationGestureRecognizer.rotation = 0.0;
 }

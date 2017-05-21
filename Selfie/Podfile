@@ -7,6 +7,7 @@ target 'Selfie' do
 
   # Pods for Selfie
   pod 'SDCycleScrollView','~> 1.64'
+  pod 'UIView+draggable'
   target 'SelfieTests' do
     inherit! :search_paths
     # Pods for testing

@@ -67,6 +67,7 @@
 @property (weak, nonatomic) IBOutlet UIView *videoContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *stickerImageView;
 @property (weak, nonatomic) IBOutlet UIView *stickerHolderView;
+@property (weak, nonatomic) IBOutlet UIView *zoneToDrag;
 @end
 
 @protocol YCameraViewControllerDelegate
