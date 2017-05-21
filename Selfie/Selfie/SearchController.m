@@ -16,12 +16,14 @@
 @property(nonatomic, strong) UISearchBar *searchBar;
 @property(strong, nonatomic) NSArray *candidates;
 @property(weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation SearchController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self addSearchBar];
     [self.collectionView registerNib:[UINib nibWithNibName:@"CandidateCell" bundle:nil] forCellWithReuseIdentifier:@"CandidateCell"];
 }

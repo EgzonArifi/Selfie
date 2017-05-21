@@ -137,6 +137,15 @@
 			name = Search;
 			sourceTree = "<group>";
 		};
+		7730C0C01ED2148300EDC04B /* Alert View */ = {
+			isa = PBXGroup;
+			children = (
+				77F9FE6A1ED0530300E92BF7 /* EAAlertView.h */,
+				77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */,
+			);
+			name = "Alert View";
+			sourceTree = "<group>";
+		};
 		77F9FE2B1ECF525300E92BF7 = {
 			isa = PBXGroup;
 			children = (
@@ -211,11 +220,10 @@
 		77F9FE6D1ED05D4B00E92BF7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0C01ED2148300EDC04B /* Alert View */,
 				7730C0B11ED1D29A00EDC04B /* JsonLoader */,
 				77F9FE841ED0D96900E92BF7 /* SRCarouselView.h */,
 				77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */,
-				77F9FE6A1ED0530300E92BF7 /* EAAlertView.h */,
-				77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
