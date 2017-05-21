@@ -1,12 +1,17 @@
 PODS:
-  - CSStickyHeaderFlowLayout (0.2.11)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
-  - CSStickyHeaderFlowLayout
+  - SDCycleScrollView (~> 1.64)
 
 SPEC CHECKSUMS:
-  CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 9d7848986effccdb0de10817eaac11714b7d0dc9
+PODFILE CHECKSUM: 6981ebe5d1d574c07d73660dbbfbb35c0c685beb
 
 COCOAPODS: 1.1.0.rc.2

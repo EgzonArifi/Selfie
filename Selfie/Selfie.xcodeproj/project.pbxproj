@@ -22,8 +22,9 @@
 		77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */; };
 		77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE701ED05D8400E92BF7 /* HomeController.m */; };
 		77F9FE741ED0699700E92BF7 /* CandidateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE731ED0699700E92BF7 /* CandidateCell.m */; };
-		77F9FE761ED06D2400E92BF7 /* CSGrowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE751ED06D2400E92BF7 /* CSGrowHeader.xib */; };
-		77F9FE791ED0770000E92BF7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE781ED0770000E92BF7 /* SliderCell.m */; };
+		77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */; };
+		77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE881ED19B7600E92BF7 /* SliderCell.m */; };
+		77F9FE8B1ED19B7600E92BF7 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE891ED19B7600E92BF7 /* SliderCell.xib */; };
 		FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */; };
 /* End PBXBuildFile section */
 
@@ -67,9 +68,11 @@
 		77F9FE701ED05D8400E92BF7 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		77F9FE721ED0699700E92BF7 /* CandidateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateCell.h; sourceTree = "<group>"; };
 		77F9FE731ED0699700E92BF7 /* CandidateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateCell.m; sourceTree = "<group>"; };
-		77F9FE751ED06D2400E92BF7 /* CSGrowHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSGrowHeader.xib; sourceTree = "<group>"; };
-		77F9FE771ED0770000E92BF7 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
-		77F9FE781ED0770000E92BF7 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
+		77F9FE841ED0D96900E92BF7 /* SRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCarouselView.h; sourceTree = "<group>"; };
+		77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCarouselView.m; sourceTree = "<group>"; };
+		77F9FE871ED19B7600E92BF7 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		77F9FE881ED19B7600E92BF7 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
+		77F9FE891ED19B7600E92BF7 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +178,8 @@
 		77F9FE6D1ED05D4B00E92BF7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				77F9FE841ED0D96900E92BF7 /* SRCarouselView.h */,
+				77F9FE851ED0D96900E92BF7 /* SRCarouselView.m */,
 				77F9FE6A1ED0530300E92BF7 /* EAAlertView.h */,
 				77F9FE6B1ED0530300E92BF7 /* EAAlertView.m */,
 			);
@@ -184,13 +189,13 @@
 		77F9FE6E1ED05D6200E92BF7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				77F9FE751ED06D2400E92BF7 /* CSGrowHeader.xib */,
-				77F9FE771ED0770000E92BF7 /* SliderCell.h */,
-				77F9FE781ED0770000E92BF7 /* SliderCell.m */,
 				77F9FE6F1ED05D8400E92BF7 /* HomeController.h */,
 				77F9FE701ED05D8400E92BF7 /* HomeController.m */,
 				77F9FE721ED0699700E92BF7 /* CandidateCell.h */,
 				77F9FE731ED0699700E92BF7 /* CandidateCell.m */,
+				77F9FE871ED19B7600E92BF7 /* SliderCell.h */,
+				77F9FE881ED19B7600E92BF7 /* SliderCell.m */,
+				77F9FE891ED19B7600E92BF7 /* SliderCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -292,10 +297,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F9FE8B1ED19B7600E92BF7 /* SliderCell.xib in Resources */,
 				77F9FE471ECF525300E92BF7 /* LaunchScreen.storyboard in Resources */,
 				77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */,
 				77F9FE441ECF525300E92BF7 /* Assets.xcassets in Resources */,
-				77F9FE761ED06D2400E92BF7 /* CSGrowHeader.xib in Resources */,
 				77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */,
 				77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */,
 			);
@@ -411,11 +416,12 @@
 				77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */,
 				77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */,
 				77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */,
+				77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */,
+				77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
 				77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */,
 				77F9FE391ECF525300E92BF7 /* main.m in Sources */,
 				77F9FE621ECF6E3000E92BF7 /* CameraStickersView.m in Sources */,
-				77F9FE791ED0770000E92BF7 /* SliderCell.m in Sources */,
 				77F9FE741ED0699700E92BF7 /* CandidateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

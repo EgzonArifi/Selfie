@@ -9,34 +9,21 @@
 #import "HomeController.h"
 #import "YCameraViewController.h"
 #import "CandidateCell.h"
-#import "CSStickyHeaderFlowLayout.h"
+#import "SliderCell.h"
 
 @interface HomeController ()
 @property (strong, nonatomic) NSArray *candidates;
-@property (nonatomic, strong) UINib *headerNib;
 @end
 
 @implementation HomeController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view
     
-    [self reloadLayout];
-    // Also insets the scroll indicator so it appears below the search bar
-   // self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
+    self.candidates = @[@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti"];
     
-    [self.collectionView registerNib:self.headerNib
-          forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
-                 withReuseIdentifier:@"SliderCell"];
-}
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        self.candidates = @[@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti"];
-        self.headerNib = [UINib nibWithNibName:@"CSGrowHeader" bundle:nil];
-    }
-    return self;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"SliderCell" bundle:nil] forCellWithReuseIdentifier:@"SliderCell"];
+    
 }
 - (IBAction)goToStickerCamera:(id)sender {
     [self.navigationController presentViewController:[[YCameraViewController alloc] init]
@@ -45,54 +32,56 @@
 }
 
 #pragma mark - CollectionView Delegate and Datasource
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [self reloadLayout];
-}
-
-- (void)reloadLayout {
-    CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
-    
-    if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
-        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 200);
-        layout.itemSize = CGSizeMake(self.view.frame.size.width, layout.itemSize.height);
-        // If we want to disable the sticky header effect
-        layout.disableStickyHeaders = NO;
-    }
-}
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }
     return self.candidates.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    CandidateCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CandidateCell"
-                                                                  forIndexPath:indexPath];
-    [cell.candidateImage setImage:[UIImage imageNamed:self.candidates[indexPath.row]]];
-    return cell;
+    if (indexPath.section == 0) {
+        SliderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SliderCell"
+                                                                     forIndexPath:indexPath];
+//        [cell loadSlider];
+        return cell;
+    } else {
+        CandidateCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CandidateCell"
+                                                                        forIndexPath:indexPath];
+        [cell.candidateImage setImage:[UIImage imageNamed:self.candidates[indexPath.row]]];
+        return cell;
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
- 
-    if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
-        UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                                            withReuseIdentifier:@"SliderCell"
-                                                                                   forIndexPath:indexPath];
-        
-        return cell;
-    }
+    
+    /*if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
+     SliderCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+     withReuseIdentifier:@"SliderCell"
+     forIndexPath:indexPath];
+     [cell loadSlider];
+     return cell;
+     }*/
     return nil;
 }
-
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    if (section == 0) {
+        return UIEdgeInsetsMake(0, 0, 0, 0);
+    }
+    return UIEdgeInsetsMake(5, 2.5, 5, 2.5);
+}
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return CGSizeMake(self.collectionView.frame.size.width/2.2, self.collectionView.frame.size.width/2.2);
+    if (indexPath.section == 0) {
+        return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.width/1.5);
+    }
+    return CGSizeMake(self.collectionView.frame.size.width/2.1, self.collectionView.frame.size.width/2.1);
 }
 @end
