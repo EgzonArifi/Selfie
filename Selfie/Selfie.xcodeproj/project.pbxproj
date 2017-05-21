@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C2D309276B8FDBF75284E6B /* libPods-SelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */; };
+		7730C0B01ED1CB1900EDC04B /* CandidateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */; };
 		77F9FE391ECF525300E92BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE381ECF525300E92BF7 /* main.m */; };
 		77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */; };
 		77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE401ECF525300E92BF7 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 		4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.release.xcconfig"; sourceTree = "<group>"; };
 		671E45BC988311D0F61314F2 /* Pods-Selfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.debug.xcconfig"; sourceTree = "<group>"; };
 		6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateModel.h; sourceTree = "<group>"; };
+		7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateModel.m; sourceTree = "<group>"; };
 		77F9FE341ECF525300E92BF7 /* Selfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				77F9FE871ED19B7600E92BF7 /* SliderCell.h */,
 				77F9FE881ED19B7600E92BF7 /* SliderCell.m */,
 				77F9FE891ED19B7600E92BF7 /* SliderCell.xib */,
+				7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */,
+				7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */,
 				77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */,
 				77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */,
+				7730C0B01ED1CB1900EDC04B /* CandidateModel.m in Sources */,
 				77F9FE861ED0D96900E92BF7 /* SRCarouselView.m in Sources */,
 				77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
