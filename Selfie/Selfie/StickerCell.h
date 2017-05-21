@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StickerCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *stickerImageView;
 
 @end

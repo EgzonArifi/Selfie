@@ -166,6 +166,8 @@
 		7730C0C31ED214F900EDC04B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */,
+				7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,8 +175,20 @@
 		7730C0C41ED214FE00EDC04B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77F9FE401ECF525300E92BF7 /* Main.storyboard */,
+				77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		7730C0C51ED2152800EDC04B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				77F9FE651ECFA9D400E92BF7 /* StickerCell.h */,
+				77F9FE661ECFA9D400E92BF7 /* StickerCell.m */,
+				77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		77F9FE2B1ECF525300E92BF7 = {
@@ -209,9 +223,7 @@
 				77F9FE6E1ED05D6200E92BF7 /* Home */,
 				77F9FE5F1ECF535000E92BF7 /* Camera */,
 				77F9FE6D1ED05D4B00E92BF7 /* Utils */,
-				77F9FE401ECF525300E92BF7 /* Main.storyboard */,
 				77F9FE431ECF525300E92BF7 /* Assets.xcassets */,
-				77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */,
 				77F9FE481ECF525300E92BF7 /* Info.plist */,
 				77F9FE371ECF525300E92BF7 /* Supporting Files */,
 			);
@@ -239,14 +251,12 @@
 		77F9FE5F1ECF535000E92BF7 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0C51ED2152800EDC04B /* Cells */,
 				77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */,
 				77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */,
 				77F9FE601ECF6E3000E92BF7 /* CameraStickersView.h */,
 				77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */,
 				77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */,
-				77F9FE651ECFA9D400E92BF7 /* StickerCell.h */,
-				77F9FE661ECFA9D400E92BF7 /* StickerCell.m */,
-				77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -266,8 +276,6 @@
 				7730C0C11ED214C300EDC04B /* Cells */,
 				77F9FE6F1ED05D8400E92BF7 /* HomeController.h */,
 				77F9FE701ED05D8400E92BF7 /* HomeController.m */,
-				7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */,
-				7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
