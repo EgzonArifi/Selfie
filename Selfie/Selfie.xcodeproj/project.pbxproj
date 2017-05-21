@@ -159,6 +159,9 @@
 		7730C0C21ED214F300EDC04B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0B71ED1DD7100EDC04B /* Search */,
+				77F9FE6E1ED05D6200E92BF7 /* Home */,
+				77F9FE5F1ECF535000E92BF7 /* Camera */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -225,14 +228,11 @@
 		77F9FE361ECF525300E92BF7 /* Selfie */ = {
 			isa = PBXGroup;
 			children = (
-				7730C0C41ED214FE00EDC04B /* View */,
-				7730C0C31ED214F900EDC04B /* Model */,
-				7730C0C21ED214F300EDC04B /* Controller */,
 				77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */,
 				77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */,
-				7730C0B71ED1DD7100EDC04B /* Search */,
-				77F9FE6E1ED05D6200E92BF7 /* Home */,
-				77F9FE5F1ECF535000E92BF7 /* Camera */,
+				7730C0C31ED214F900EDC04B /* Model */,
+				7730C0C41ED214FE00EDC04B /* View */,
+				7730C0C21ED214F300EDC04B /* Controller */,
 				77F9FE6D1ED05D4B00E92BF7 /* Utils */,
 				77F9FE431ECF525300E92BF7 /* Assets.xcassets */,
 				77F9FE481ECF525300E92BF7 /* Info.plist */,
