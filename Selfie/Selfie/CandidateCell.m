@@ -10,4 +10,10 @@
 
 @implementation CandidateCell
 
+- (void)configureCell:(CandidateModel *)candidate {
+    [self.candidateImage setImage:[UIImage imageNamed:candidate.images.firstObject]];
+    self.candidateName.text = candidate.name;
+    self.candidateNumber.text = candidate.number;
+}
+
 @end

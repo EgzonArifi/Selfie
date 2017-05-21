@@ -7,8 +7,9 @@
 //
 
 #import "CandidateModel.h"
+#import "JsonLoader.h"
 
-NSString *const kCandidateModelIdField = @"id";
+NSString *const kCandidateModelNumber = @"id";
 NSString *const kCandidateModelImages = @"images";
 NSString *const kCandidateModelName = @"name";
 
@@ -20,8 +21,8 @@ NSString *const kCandidateModelName = @"name";
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     
-    if (![dictionary[kCandidateModelIdField] isKindOfClass:[NSNull class]] ){
-        self.idField = [dictionary[kCandidateModelIdField] integerValue];
+    if (![dictionary[kCandidateModelNumber] isKindOfClass:[NSNull class]] ){
+        self.number = dictionary[kCandidateModelNumber];
     }
     
     if (![dictionary[kCandidateModelImages] isKindOfClass:[NSNull class]]) {
@@ -32,5 +33,18 @@ NSString *const kCandidateModelName = @"name";
     }
     return self;
 }
-
++ (void)loadCandidates:(void (^)(NSArray *candidatesArray))completion {
+    NSMutableArray *array = [NSMutableArray new];
+    for (NSDictionary *attributes in [JsonLoader loadJsonFromFile:@"candidates"]) {
+        CandidateModel *candidate = [[CandidateModel alloc] initWithDictionary:attributes];
+        [array addObject:candidate];
+    }
+    
+    NSPredicate *applePred = [NSPredicate predicateWithFormat:
+                              @"name CONTAINS[cd] 'Is'"];
+    NSArray *appleEmployees = [array filteredArrayUsingPredicate:applePred];
+    CandidateModel *mod = appleEmployees.firstObject;
+    NSLog(@"%@",mod.name);
+    completion(array);
+}
 @end

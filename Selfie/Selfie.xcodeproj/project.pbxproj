@@ -10,6 +10,7 @@
 		5C2D309276B8FDBF75284E6B /* libPods-SelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */; };
 		7730C0B01ED1CB1900EDC04B /* CandidateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */; };
 		7730C0B41ED1D2B100EDC04B /* JsonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0B31ED1D2B100EDC04B /* JsonLoader.m */; };
+		7730C0B61ED1D4E000EDC04B /* candidates.json in Resources */ = {isa = PBXBuildFile; fileRef = 7730C0B51ED1D4E000EDC04B /* candidates.json */; };
 		77F9FE391ECF525300E92BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE381ECF525300E92BF7 /* main.m */; };
 		77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */; };
 		77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE401ECF525300E92BF7 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateModel.m; sourceTree = "<group>"; };
 		7730C0B21ED1D2B100EDC04B /* JsonLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonLoader.h; sourceTree = "<group>"; };
 		7730C0B31ED1D2B100EDC04B /* JsonLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonLoader.m; sourceTree = "<group>"; };
+		7730C0B51ED1D4E000EDC04B /* candidates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = candidates.json; sourceTree = "<group>"; };
 		77F9FE341ECF525300E92BF7 /* Selfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		77F9FE371ECF525300E92BF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0B51ED1D4E000EDC04B /* candidates.json */,
 				77F9FE381ECF525300E92BF7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -318,6 +321,7 @@
 				77F9FE8B1ED19B7600E92BF7 /* SliderCell.xib in Resources */,
 				77F9FE471ECF525300E92BF7 /* LaunchScreen.storyboard in Resources */,
 				77F9FE691ECFA9D400E92BF7 /* StickerCell.xib in Resources */,
+				7730C0B61ED1D4E000EDC04B /* candidates.json in Resources */,
 				77F9FE441ECF525300E92BF7 /* Assets.xcassets in Resources */,
 				77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */,
 				77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */,

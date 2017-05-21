@@ -10,6 +10,7 @@
 #import "YCameraViewController.h"
 #import "CandidateCell.h"
 #import "SliderCell.h"
+#import "CandidateModel.h"
 
 @interface HomeController ()
 @property (strong, nonatomic) NSArray *candidates;
@@ -21,7 +22,10 @@
     [super viewDidLoad];
     
     [self.search setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.search.bounds.size.height)];
-    self.candidates = @[@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti",@"isa_mustafa",@"avdulla.hoti"];
+    
+    [CandidateModel loadCandidates:^(NSArray *candidatesArray) {
+        self.candidates = candidatesArray;
+    }];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"SliderCell" bundle:nil] forCellWithReuseIdentifier:@"SliderCell"];
     
@@ -52,7 +56,7 @@
     } else {
         CandidateCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CandidateCell"
                                                                         forIndexPath:indexPath];
-        [cell.candidateImage setImage:[UIImage imageNamed:self.candidates[indexPath.row]]];
+        [cell configureCell:self.candidates[indexPath.row]];
         return cell;
     }
 }
