@@ -175,6 +175,7 @@
 		7730C0C41ED214FE00EDC04B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7730C0C61ED2156600EDC04B /* Camera Stickers */,
 				77F9FE401ECF525300E92BF7 /* Main.storyboard */,
 				77F9FE451ECF525300E92BF7 /* LaunchScreen.storyboard */,
 			);
@@ -189,6 +190,16 @@
 				77F9FE671ECFA9D400E92BF7 /* StickerCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		7730C0C61ED2156600EDC04B /* Camera Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				77F9FE601ECF6E3000E92BF7 /* CameraStickersView.h */,
+				77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */,
+				77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */,
+			);
+			name = "Camera Stickers";
 			sourceTree = "<group>";
 		};
 		77F9FE2B1ECF525300E92BF7 = {
@@ -254,9 +265,6 @@
 				7730C0C51ED2152800EDC04B /* Cells */,
 				77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */,
 				77F9FE5D1ECF52B500E92BF7 /* YCameraViewController.m */,
-				77F9FE601ECF6E3000E92BF7 /* CameraStickersView.h */,
-				77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */,
-				77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
