@@ -92,7 +92,6 @@
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 }
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
@@ -106,17 +105,18 @@
     self.stickerHolderView.cagingArea =  CGRectMake(0, 0, self.zoneToDrag.frame.size.width,self.zoneToDrag.frame.size.height);
     self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
     self.stickersView.delegate = self;
+    self.stickersView.stickers = self.candidateModel.images;
     [self.stickerContainerView addSubview:self.stickersView];
+    [self.frameImage setImage:[UIImage imageNamed:[self.candidateModel getFrame]]];
+    
 }
-
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [session stopRunning];
     //    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
-
--(void) dealloc {
+- (void) dealloc {
     [_imagePreview release];
     [_captureImage release];
     [imgPicker release];
@@ -651,6 +651,7 @@
     
     rotationGestureRecognizer.rotation = 0.0;
 }
+
 #pragma mark - Share
 - (IBAction)postToFacebook:(id)sender {
     [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
@@ -701,7 +702,7 @@
         }
     }];
 }
-- (void) imageWithView:(UIView *)view completion:(void (^)(UIImage *image))block {
+- (void)imageWithView:(UIView *)view completion:(void (^)(UIImage *image))block {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0f);
     [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:NO];
     UIImage * snapshotImage = UIGraphicsGetImageFromCurrentImageContext();

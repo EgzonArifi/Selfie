@@ -24,9 +24,7 @@
     self.contentView.translatesAutoresizingMaskIntoConstraints = YES;
     
     NSArray *imageNames = @[@"Slide1",
-                            @"Slide1",
-                            @"Slide1",
-                            @"Slide1."];
+                            @"Slide2"];
     CGFloat width = self.contentView.bounds.size.width;
     
     cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, width, width/1.5)

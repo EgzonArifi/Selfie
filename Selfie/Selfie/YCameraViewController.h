@@ -27,6 +27,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMotion/CoreMotion.h>
 #import "CameraStickersView.h"
+#import "CandidateModel.h"
 
 @protocol YCameraViewControllerDelegate;
 
@@ -68,6 +69,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *stickerImageView;
 @property (weak, nonatomic) IBOutlet UIView *stickerHolderView;
 @property (weak, nonatomic) IBOutlet UIView *zoneToDrag;
+
+@property (strong, nonatomic) CandidateModel *candidateModel;
+@property (weak, nonatomic) IBOutlet UIImageView *frameImage;
+
 @end
 
 @protocol YCameraViewControllerDelegate
