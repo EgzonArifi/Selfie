@@ -14,6 +14,19 @@
     [self.candidateImage setImage:[UIImage imageNamed:candidate.images.firstObject]];
     self.candidateName.text = candidate.name;
     self.candidateNumber.text = candidate.number;
+    switch (candidate.type) {
+        case LDK:
+            self.backgroundColor = LdkBackColor;
+            break;
+        case AKR:
+            self.backgroundColor = AkrBackColor;
+            break;
+        case Alternativa:
+            self.backgroundColor = AlternativaBackColor;
+            break;
+        default:
+            break;
+    }
 }
 
 @end

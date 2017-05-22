@@ -12,6 +12,7 @@
 NSString *const kCandidateModelNumber = @"id";
 NSString *const kCandidateModelImages = @"images";
 NSString *const kCandidateModelName = @"name";
+NSString *const kCandidateModelType = @"type";
 
 @interface CandidateModel ()
 
@@ -25,16 +26,33 @@ NSString *const kCandidateModelName = @"name";
     if (![dictionary[kCandidateModelNumber] isKindOfClass:[NSNull class]] ){
         self.number = dictionary[kCandidateModelNumber];
     }
-    
     if (![dictionary[kCandidateModelImages] isKindOfClass:[NSNull class]]) {
         self.images = dictionary[kCandidateModelImages];
     }
     if (![dictionary[kCandidateModelName] isKindOfClass:[NSNull class]]) {
         self.name = dictionary[kCandidateModelName];
     }
+    if (![dictionary[kCandidateModelType] isKindOfClass:[NSNull class]]) {
+        self.type = [dictionary[kCandidateModelType] integerValue];
+    }
     return self;
 }
-
+- (NSString *)getFrame {
+    switch (self.type) {
+        case LDK:
+            return LdkFrame;
+            break;
+        case AKR:
+            return AkrFrame;
+            break;
+        case Alternativa:
+            return AlternativaFrame;
+            break;
+        default:
+            return @"";
+            break;
+    }
+}
 + (void)loadCandidates:(void (^)(NSArray *candidatesArray))completion {
     NSMutableArray *array = [NSMutableArray new];
     for (NSDictionary *attributes in [JsonLoader loadJsonFromFile:@"candidates"]) {
