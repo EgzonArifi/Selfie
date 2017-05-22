@@ -81,7 +81,11 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self goToStickerCamera:nil];
+    YCameraViewController *camera = [[YCameraViewController alloc] init];
+    camera.candidateModel = self.candidates[indexPath.row];
+    [self.navigationController presentViewController:camera
+                                            animated:YES
+                                          completion:nil];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
