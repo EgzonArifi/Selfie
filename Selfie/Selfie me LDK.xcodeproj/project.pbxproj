@@ -14,6 +14,12 @@
 		7730C0BA1ED1DD8E00EDC04B /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0B91ED1DD8E00EDC04B /* SearchController.m */; };
 		7730C0BE1ED205E400EDC04B /* CandidateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7730C0BC1ED205E400EDC04B /* CandidateCell.m */; };
 		7730C0BF1ED205E400EDC04B /* CandidateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7730C0BD1ED205E400EDC04B /* CandidateCell.xib */; };
+		7774BEEB1ED6008800C3101F /* StickersCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774BEEA1ED6008800C3101F /* StickersCollectionController.m */; };
+		7774BEEE1ED6011100C3101F /* StickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774BEED1ED6011100C3101F /* StickerCollectionViewCell.m */; };
+		7774BEF21ED608BC00C3101F /* CameraCollectionStickers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774BEF11ED608BC00C3101F /* CameraCollectionStickers.m */; };
+		7774BEF41ED608CE00C3101F /* CameraCollectionStickers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7774BEF31ED608CE00C3101F /* CameraCollectionStickers.xib */; };
+		7774BEF81ED60A2800C3101F /* CameraCollectionStikcerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774BEF61ED60A2800C3101F /* CameraCollectionStikcerCell.m */; };
+		7774BEF91ED60A2800C3101F /* CameraCollectionStikcerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7774BEF71ED60A2800C3101F /* CameraCollectionStikcerCell.xib */; };
 		77F9FE391ECF525300E92BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE381ECF525300E92BF7 /* main.m */; };
 		77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */; };
 		77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE401ECF525300E92BF7 /* Main.storyboard */; };
@@ -29,7 +35,8 @@
 		77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE701ED05D8400E92BF7 /* HomeController.m */; };
 		77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9FE881ED19B7600E92BF7 /* SliderCell.m */; };
 		77F9FE8B1ED19B7600E92BF7 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F9FE891ED19B7600E92BF7 /* SliderCell.xib */; };
-		FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */; };
+		963984D85D19C3D5619C3FEC /* libPods-Selfie me LDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8E6751105E0AF30A2B5A95 /* libPods-Selfie me LDKTests.a */; };
+		C00050FB31EE7DE8B2E337DD /* libPods-Selfie me LDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174C5896384D7EC9F579830C /* libPods-Selfie me LDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		174C5896384D7EC9F579830C /* libPods-Selfie me LDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfie me LDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27729A85058572A2532FCACA /* Pods-Selfie me LDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie me LDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie me LDKTests/Pods-Selfie me LDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E8E6751105E0AF30A2B5A95 /* libPods-Selfie me LDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfie me LDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.release.xcconfig"; sourceTree = "<group>"; };
+		55A78F948F340F09239E5E7E /* Pods-Selfie me LDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie me LDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie me LDK/Pods-Selfie me LDK.release.xcconfig"; sourceTree = "<group>"; };
 		671E45BC988311D0F61314F2 /* Pods-Selfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB7E85CC302D6F98FDC1BEC /* Pods-Selfie me LDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie me LDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie me LDKTests/Pods-Selfie me LDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7730C0AE1ED1CB1900EDC04B /* CandidateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateModel.h; sourceTree = "<group>"; };
 		7730C0AF1ED1CB1900EDC04B /* CandidateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateModel.m; sourceTree = "<group>"; };
@@ -57,6 +69,16 @@
 		7730C0BB1ED205E400EDC04B /* CandidateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateCell.h; sourceTree = "<group>"; };
 		7730C0BC1ED205E400EDC04B /* CandidateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateCell.m; sourceTree = "<group>"; };
 		7730C0BD1ED205E400EDC04B /* CandidateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CandidateCell.xib; sourceTree = "<group>"; };
+		7774BEE91ED6008800C3101F /* StickersCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickersCollectionController.h; sourceTree = "<group>"; };
+		7774BEEA1ED6008800C3101F /* StickersCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickersCollectionController.m; sourceTree = "<group>"; };
+		7774BEEC1ED6011100C3101F /* StickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCollectionViewCell.h; sourceTree = "<group>"; };
+		7774BEED1ED6011100C3101F /* StickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCollectionViewCell.m; sourceTree = "<group>"; };
+		7774BEF01ED608BC00C3101F /* CameraCollectionStickers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCollectionStickers.h; sourceTree = "<group>"; };
+		7774BEF11ED608BC00C3101F /* CameraCollectionStickers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraCollectionStickers.m; sourceTree = "<group>"; };
+		7774BEF31ED608CE00C3101F /* CameraCollectionStickers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraCollectionStickers.xib; sourceTree = "<group>"; };
+		7774BEF51ED60A2800C3101F /* CameraCollectionStikcerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCollectionStikcerCell.h; sourceTree = "<group>"; };
+		7774BEF61ED60A2800C3101F /* CameraCollectionStikcerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraCollectionStikcerCell.m; sourceTree = "<group>"; };
+		7774BEF71ED60A2800C3101F /* CameraCollectionStikcerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraCollectionStikcerCell.xib; sourceTree = "<group>"; };
 		77F9FE341ECF525300E92BF7 /* Selfie me LDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Selfie me LDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +107,7 @@
 		77F9FE891ED19B7600E92BF7 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie/Pods-Selfie.release.xcconfig"; sourceTree = "<group>"; };
+		F40181F89C95A624E3D89FB3 /* Pods-Selfie me LDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfie me LDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfie me LDK/Pods-Selfie me LDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF008FA148962C7F9EFC0DBA /* libPods-Selfie.a in Frameworks */,
+				C00050FB31EE7DE8B2E337DD /* libPods-Selfie me LDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2D309276B8FDBF75284E6B /* libPods-SelfieTests.a in Frameworks */,
+				963984D85D19C3D5619C3FEC /* libPods-Selfie me LDKTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +136,8 @@
 			children = (
 				3C3B462E4891DB33D1D72190 /* libPods-Selfie.a */,
 				6E990B5514CE0DE2D904ED01 /* libPods-SelfieTests.a */,
+				174C5896384D7EC9F579830C /* libPods-Selfie me LDK.a */,
+				2E8E6751105E0AF30A2B5A95 /* libPods-Selfie me LDKTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +185,7 @@
 		7730C0C21ED214F300EDC04B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7774BEE81ED6004500C3101F /* Stickers Collection */,
 				7730C0B71ED1DD7100EDC04B /* Search */,
 				77F9FE6E1ED05D6200E92BF7 /* Home */,
 				77F9FE5F1ECF535000E92BF7 /* Camera */,
@@ -201,8 +228,25 @@
 				77F9FE601ECF6E3000E92BF7 /* CameraStickersView.h */,
 				77F9FE611ECF6E3000E92BF7 /* CameraStickersView.m */,
 				77F9FE631ECF6E3D00E92BF7 /* CameraStickersView.xib */,
+				7774BEF01ED608BC00C3101F /* CameraCollectionStickers.h */,
+				7774BEF11ED608BC00C3101F /* CameraCollectionStickers.m */,
+				7774BEF31ED608CE00C3101F /* CameraCollectionStickers.xib */,
+				7774BEF51ED60A2800C3101F /* CameraCollectionStikcerCell.h */,
+				7774BEF61ED60A2800C3101F /* CameraCollectionStikcerCell.m */,
+				7774BEF71ED60A2800C3101F /* CameraCollectionStikcerCell.xib */,
 			);
 			name = "Camera Stickers";
+			sourceTree = "<group>";
+		};
+		7774BEE81ED6004500C3101F /* Stickers Collection */ = {
+			isa = PBXGroup;
+			children = (
+				7774BEE91ED6008800C3101F /* StickersCollectionController.h */,
+				7774BEEA1ED6008800C3101F /* StickersCollectionController.m */,
+				7774BEEC1ED6011100C3101F /* StickerCollectionViewCell.h */,
+				7774BEED1ED6011100C3101F /* StickerCollectionViewCell.m */,
+			);
+			name = "Stickers Collection";
 			sourceTree = "<group>";
 		};
 		77F9FE2B1ECF525300E92BF7 = {
@@ -295,6 +339,10 @@
 				D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */,
 				84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */,
 				4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */,
+				F40181F89C95A624E3D89FB3 /* Pods-Selfie me LDK.debug.xcconfig */,
+				55A78F948F340F09239E5E7E /* Pods-Selfie me LDK.release.xcconfig */,
+				27729A85058572A2532FCACA /* Pods-Selfie me LDKTests.debug.xcconfig */,
+				6DB7E85CC302D6F98FDC1BEC /* Pods-Selfie me LDKTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -354,6 +402,7 @@
 				TargetAttributes = {
 					77F9FE331ECF525300E92BF7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = A4L93BSQEG;
 					};
 					77F9FE4C1ECF525300E92BF7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -391,8 +440,10 @@
 				7730C0B61ED1D4E000EDC04B /* candidates.json in Resources */,
 				77F9FE441ECF525300E92BF7 /* Assets.xcassets in Resources */,
 				77F9FE421ECF525300E92BF7 /* Main.storyboard in Resources */,
+				7774BEF91ED60A2800C3101F /* CameraCollectionStikcerCell.xib in Resources */,
 				77F9FE641ECF6E3D00E92BF7 /* CameraStickersView.xib in Resources */,
 				7730C0BF1ED205E400EDC04B /* CandidateCell.xib in Resources */,
+				7774BEF41ED608CE00C3101F /* CameraCollectionStickers.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +484,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie/Pods-Selfie-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie me LDK/Pods-Selfie me LDK-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		65BBB079914F647C4208E7C3 /* [CP] Check Pods Manifest.lock */ = {
@@ -463,7 +514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie me LDKTests/Pods-Selfie me LDKTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9FF144ED67D47DC5E9E32E63 /* [CP] Embed Pods Frameworks */ = {
@@ -478,7 +529,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie/Pods-Selfie-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie me LDK/Pods-Selfie me LDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E18C5534A0569A1798B861C5 /* [CP] Copy Pods Resources */ = {
@@ -493,7 +544,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfieTests/Pods-SelfieTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfie me LDKTests/Pods-Selfie me LDKTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -505,10 +556,14 @@
 			files = (
 				77F9FE3C1ECF525300E92BF7 /* AppDelegate.m in Sources */,
 				77F9FE711ED05D8400E92BF7 /* HomeController.m in Sources */,
+				7774BEF81ED60A2800C3101F /* CameraCollectionStikcerCell.m in Sources */,
+				7774BEEE1ED6011100C3101F /* StickerCollectionViewCell.m in Sources */,
 				77F9FE6C1ED0530300E92BF7 /* EAAlertView.m in Sources */,
 				7730C0B01ED1CB1900EDC04B /* CandidateModel.m in Sources */,
+				7774BEF21ED608BC00C3101F /* CameraCollectionStickers.m in Sources */,
 				7730C0B41ED1D2B100EDC04B /* JsonLoader.m in Sources */,
 				77F9FE8A1ED19B7600E92BF7 /* SliderCell.m in Sources */,
+				7774BEEB1ED6008800C3101F /* StickersCollectionController.m in Sources */,
 				7730C0BE1ED205E400EDC04B /* CandidateCell.m in Sources */,
 				77F9FE5E1ECF52B500E92BF7 /* YCameraViewController.m in Sources */,
 				77F9FE681ECFA9D400E92BF7 /* StickerCell.m in Sources */,
@@ -640,9 +695,11 @@
 		};
 		77F9FE571ECF525300E92BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671E45BC988311D0F61314F2 /* Pods-Selfie.debug.xcconfig */;
+			baseConfigurationReference = F40181F89C95A624E3D89FB3 /* Pods-Selfie me LDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Selfie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -653,9 +710,11 @@
 		};
 		77F9FE581ECF525300E92BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B4CD0D2936AA508BB4AAB9 /* Pods-Selfie.release.xcconfig */;
+			baseConfigurationReference = 55A78F948F340F09239E5E7E /* Pods-Selfie me LDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Selfie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -666,7 +725,7 @@
 		};
 		77F9FE5A1ECF525300E92BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84407D3B85196B6F0BF657EC /* Pods-SelfieTests.debug.xcconfig */;
+			baseConfigurationReference = 27729A85058572A2532FCACA /* Pods-Selfie me LDKTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SelfieTests/Info.plist;
@@ -679,7 +738,7 @@
 		};
 		77F9FE5B1ECF525300E92BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C9BBFEB4BFBA67A0377D0F1 /* Pods-SelfieTests.release.xcconfig */;
+			baseConfigurationReference = 6DB7E85CC302D6F98FDC1BEC /* Pods-Selfie me LDKTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SelfieTests/Info.plist;

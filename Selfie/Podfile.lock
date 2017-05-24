@@ -1,4 +1,5 @@
 PODS:
+  - LGSemiModalNavController (0.2.0)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
   - SDWebImage (3.8.2):
@@ -7,14 +8,16 @@ PODS:
   - UIView+draggable (1.1.0)
 
 DEPENDENCIES:
+  - LGSemiModalNavController
   - SDCycleScrollView (~> 1.64)
   - UIView+draggable
 
 SPEC CHECKSUMS:
+  LGSemiModalNavController: ba49f8cbc24638be981cbca8a526f66b5dd90414
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   UIView+draggable: ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
 
-PODFILE CHECKSUM: b4e6f5c89b2d9935a3b06c3f0d709a43d4b6b23d
+PODFILE CHECKSUM: 6cdfc8f51e053bdd97178b51f18666064a0f7132
 
 COCOAPODS: 1.1.0.rc.2
