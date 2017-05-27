@@ -23,13 +23,15 @@
         [self.collectionView registerNib:[UINib nibWithNibName:@"StickerCell" bundle: nil]
               forCellWithReuseIdentifier:@"StickerCell"];
         
-        self.stickers = @[@"isa_mustafa",@"sticker1",@"sticker2",@"sticker3",@"sticker4"];
-        
         [self addSubview:self.mainView];
     }
     return self;
 }
-
+- (void)configureList:(CandidateModel *)candidateModel {
+    self.candidateModel = candidateModel;
+    self.stickers = self.candidateModel.thumbnails;
+    [self.collectionView reloadData];
+}
 #pragma mark - CollectionView Delegate and Datasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.stickers.count;
@@ -44,7 +46,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate didSelectSticker:self.stickers[indexPath.row]];
+    [self.delegate didSelectSticker:self.candidateModel.images[indexPath.row]];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView

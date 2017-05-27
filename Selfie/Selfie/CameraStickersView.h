@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CandidateModel.h"
 
 @protocol SelectedStickerDelegate <NSObject>
 
@@ -22,5 +23,6 @@
 @property (strong, nonatomic) IBOutlet CameraStickersView *mainView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray *stickers;
-
+@property (strong, nonatomic) CandidateModel *candidateModel;
+- (void)configureList:(CandidateModel *)candidateModel;
 @end
