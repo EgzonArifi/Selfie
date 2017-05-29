@@ -9,5 +9,7 @@
 #import "StickerCell.h"
 
 @implementation StickerCell
-
+-(void)awakeFromNib {
+    [super awakeFromNib];    
+}
 @end
