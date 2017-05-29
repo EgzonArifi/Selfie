@@ -79,7 +79,7 @@
 		7774BEF51ED60A2800C3101F /* CameraCollectionStikcerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCollectionStikcerCell.h; sourceTree = "<group>"; };
 		7774BEF61ED60A2800C3101F /* CameraCollectionStikcerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraCollectionStikcerCell.m; sourceTree = "<group>"; };
 		7774BEF71ED60A2800C3101F /* CameraCollectionStikcerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraCollectionStikcerCell.xib; sourceTree = "<group>"; };
-		77F9FE341ECF525300E92BF7 /* Selfie me LDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Selfie me LDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F9FE341ECF525300E92BF7 /* Selfie me Hotin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Selfie me Hotin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE381ECF525300E92BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F9FE3A1ECF525300E92BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77F9FE3B1ECF525300E92BF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		77F9FE431ECF525300E92BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77F9FE461ECF525300E92BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77F9FE481ECF525300E92BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77F9FE4D1ECF525300E92BF7 /* Selfie me LDK.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Selfie me LDK.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F9FE4D1ECF525300E92BF7 /* Selfie me Hotin.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Selfie me Hotin.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9FE511ECF525300E92BF7 /* SelfieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfieTests.m; sourceTree = "<group>"; };
 		77F9FE531ECF525300E92BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F9FE5C1ECF52B500E92BF7 /* YCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCameraViewController.h; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 		77F9FE351ECF525300E92BF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77F9FE341ECF525300E92BF7 /* Selfie me LDK.app */,
-				77F9FE4D1ECF525300E92BF7 /* Selfie me LDK.xctest */,
+				77F9FE341ECF525300E92BF7 /* Selfie me Hotin.app */,
+				77F9FE4D1ECF525300E92BF7 /* Selfie me Hotin.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,9 +350,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77F9FE331ECF525300E92BF7 /* Selfie me LDK */ = {
+		77F9FE331ECF525300E92BF7 /* Selfie me Hotin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F9FE561ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me LDK" */;
+			buildConfigurationList = 77F9FE561ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me Hotin" */;
 			buildPhases = (
 				37FC71010E8761B0CCA7B1B1 /* [CP] Check Pods Manifest.lock */,
 				77F9FE301ECF525300E92BF7 /* Sources */,
@@ -365,14 +365,14 @@
 			);
 			dependencies = (
 			);
-			name = "Selfie me LDK";
+			name = "Selfie me Hotin";
 			productName = Selfie;
-			productReference = 77F9FE341ECF525300E92BF7 /* Selfie me LDK.app */;
+			productReference = 77F9FE341ECF525300E92BF7 /* Selfie me Hotin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77F9FE4C1ECF525300E92BF7 /* Selfie me LDKTests */ = {
+		77F9FE4C1ECF525300E92BF7 /* Selfie me HotinTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F9FE591ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me LDKTests" */;
+			buildConfigurationList = 77F9FE591ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me HotinTests" */;
 			buildPhases = (
 				65BBB079914F647C4208E7C3 /* [CP] Check Pods Manifest.lock */,
 				77F9FE491ECF525300E92BF7 /* Sources */,
@@ -386,9 +386,9 @@
 			dependencies = (
 				77F9FE4F1ECF525300E92BF7 /* PBXTargetDependency */,
 			);
-			name = "Selfie me LDKTests";
+			name = "Selfie me HotinTests";
 			productName = SelfieTests;
-			productReference = 77F9FE4D1ECF525300E92BF7 /* Selfie me LDK.xctest */;
+			productReference = 77F9FE4D1ECF525300E92BF7 /* Selfie me Hotin.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -410,7 +410,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77F9FE2F1ECF525300E92BF7 /* Build configuration list for PBXProject "Selfie me LDK" */;
+			buildConfigurationList = 77F9FE2F1ECF525300E92BF7 /* Build configuration list for PBXProject "Selfie me Hotin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -423,8 +423,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77F9FE331ECF525300E92BF7 /* Selfie me LDK */,
-				77F9FE4C1ECF525300E92BF7 /* Selfie me LDKTests */,
+				77F9FE331ECF525300E92BF7 /* Selfie me Hotin */,
+				77F9FE4C1ECF525300E92BF7 /* Selfie me HotinTests */,
 			);
 		};
 /* End PBXProject section */
@@ -586,7 +586,7 @@
 /* Begin PBXTargetDependency section */
 		77F9FE4F1ECF525300E92BF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77F9FE331ECF525300E92BF7 /* Selfie me LDK */;
+			target = 77F9FE331ECF525300E92BF7 /* Selfie me Hotin */;
 			targetProxy = 77F9FE4E1ECF525300E92BF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -704,7 +704,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.egzonarifi.selfieldk;
-				PRODUCT_NAME = "Selfie me LDK";
+				PRODUCT_NAME = "Selfie me Hotin";
 			};
 			name = Debug;
 		};
@@ -719,7 +719,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.egzonarifi.selfieldk;
-				PRODUCT_NAME = "Selfie me LDK";
+				PRODUCT_NAME = "Selfie me Hotin";
 			};
 			name = Release;
 		};
@@ -731,8 +731,8 @@
 				INFOPLIST_FILE = SelfieTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.egzonarifi.SelfieTests;
-				PRODUCT_NAME = "Selfie me LDK";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfie me LDK.app/Selfie me LDK";
+				PRODUCT_NAME = "Selfie me Hotin";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfie me Hotin.app/Selfie me Hotin";
 			};
 			name = Debug;
 		};
@@ -744,15 +744,15 @@
 				INFOPLIST_FILE = SelfieTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.egzonarifi.SelfieTests;
-				PRODUCT_NAME = "Selfie me LDK";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfie me LDK.app/Selfie me LDK";
+				PRODUCT_NAME = "Selfie me Hotin";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfie me Hotin.app/Selfie me Hotin";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77F9FE2F1ECF525300E92BF7 /* Build configuration list for PBXProject "Selfie me LDK" */ = {
+		77F9FE2F1ECF525300E92BF7 /* Build configuration list for PBXProject "Selfie me Hotin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F9FE541ECF525300E92BF7 /* Debug */,
@@ -761,7 +761,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F9FE561ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me LDK" */ = {
+		77F9FE561ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me Hotin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F9FE571ECF525300E92BF7 /* Debug */,
@@ -770,7 +770,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F9FE591ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me LDKTests" */ = {
+		77F9FE591ECF525300E92BF7 /* Build configuration list for PBXNativeTarget "Selfie me HotinTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F9FE5A1ECF525300E92BF7 /* Debug */,
