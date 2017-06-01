@@ -13,27 +13,42 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sticker2" translatesAutoresizingMaskIntoConstraints="NO" id="aKg-eJ-AdV">
-                        <rect key="frame" x="8" y="8" width="72" height="72"/>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exC-q1-VMF">
+                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aKg-eJ-AdV">
+                                <rect key="frame" x="4" y="4" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fRc-DH-2po"/>
+                                    <constraint firstAttribute="width" constant="80" id="gUy-xI-1vw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aKg-eJ-AdV" secondAttribute="bottom" constant="4" id="9Ht-KA-Kb2"/>
+                            <constraint firstAttribute="trailing" secondItem="aKg-eJ-AdV" secondAttribute="trailing" constant="4" id="HGp-Ku-DKs"/>
+                            <constraint firstItem="aKg-eJ-AdV" firstAttribute="leading" secondItem="exC-q1-VMF" secondAttribute="leading" constant="4" id="MAO-Y1-Ah9"/>
+                            <constraint firstItem="aKg-eJ-AdV" firstAttribute="top" secondItem="exC-q1-VMF" secondAttribute="top" constant="4" id="Spt-KT-L7J"/>
+                            <constraint firstAttribute="width" constant="88" id="Wao-fN-g0L"/>
+                            <constraint firstAttribute="height" constant="88" id="hb4-vM-Q3c"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="aKg-eJ-AdV" secondAttribute="trailing" constant="8" id="80R-Pk-SHO"/>
-                <constraint firstAttribute="bottom" secondItem="aKg-eJ-AdV" secondAttribute="bottom" constant="8" id="Pj7-95-qYj"/>
-                <constraint firstItem="aKg-eJ-AdV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="U4B-0M-Dcm"/>
-                <constraint firstItem="aKg-eJ-AdV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ZTL-C4-si7"/>
+                <constraint firstItem="exC-q1-VMF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2Np-1y-U9i"/>
+                <constraint firstItem="exC-q1-VMF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3LP-D5-USD"/>
+                <constraint firstAttribute="bottom" secondItem="exC-q1-VMF" secondAttribute="bottom" id="4nz-Mk-SBg"/>
+                <constraint firstAttribute="trailing" secondItem="exC-q1-VMF" secondAttribute="trailing" id="9nf-Ew-lFk"/>
             </constraints>
             <size key="customSize" width="88" height="88"/>
             <connections>
+                <outlet property="holderView" destination="exC-q1-VMF" id="kF4-Ux-JmJ"/>
                 <outlet property="stickerImageView" destination="aKg-eJ-AdV" id="Khh-9f-uS9"/>
             </connections>
             <point key="canvasLocation" x="475" y="209"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="sticker2" width="121" height="105"/>
-    </resources>
 </document>

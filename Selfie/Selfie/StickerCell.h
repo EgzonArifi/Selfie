@@ -11,5 +11,6 @@
 @interface StickerCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *stickerImageView;
+@property (weak, nonatomic) IBOutlet UIView *holderView;
 
 @end
