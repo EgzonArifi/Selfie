@@ -11,13 +11,20 @@
 #import <Social/Social.h>
 #import "EAAlertView.h"
 #import "UIView+draggable.h"
+#import "LGSemiModalNavViewController.h"
+#import "StickersCollectionController.h"
+#import "CameraCollectionStickers.h"
 
 #define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
-@interface YCameraViewController ()<SelectedStickerDelegate> {
+
+@interface YCameraViewController ()<SelectedStickerDelegate,CameraStickerDelegate> {
     UIInterfaceOrientation orientationLast, orientationAfterProcess;
     CMMotionManager *motionManager;
+    CameraCollectionStickers *cameraCollectionStickers;
+    BOOL isSetSticker;
 }
+@property (weak, nonatomic) IBOutlet UIButton *stickerButton;
 
 @end
 
@@ -45,11 +52,10 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    isSetSticker = NO;
     //    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
     //        self.edgesForExtendedLayout = UIRectEdgeNone;
     //    }
-    
     self.navigationController.navigationBarHidden = YES;
     [self.navigationController setNavigationBarHidden:YES];
     
@@ -86,6 +92,20 @@
     
 }
 - (void)didSelectSticker:(NSString *)sticker {
+    if (isSetSticker) {
+        float currentScale = [[self.stickerImageView.layer valueForKeyPath:@"transform.scale.x"] floatValue];
+        float minScale = 0.4;
+        float maxScale = 3.0;
+        float zoomSpeed = 1.5;
+        float deltaScale = 2.1;
+        deltaScale = ((deltaScale - 1) * zoomSpeed) + 1;
+        deltaScale = MIN(deltaScale, maxScale / currentScale);
+        deltaScale = MAX(deltaScale, minScale / currentScale);
+        
+        CGAffineTransform zoomTransform = CGAffineTransformScale(self.stickerImageView.transform, deltaScale, deltaScale);
+        self.stickerImageView.transform = zoomTransform;
+    }
+    isSetSticker = NO;
     [self.stickerImageView setImage:[UIImage imageNamed:sticker]];
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -103,20 +123,25 @@
     }
     [self.stickerHolderView enableDragging];
     self.stickerHolderView.cagingArea =  CGRectMake(0, 0, self.zoneToDrag.frame.size.width,self.zoneToDrag.frame.size.height);
-    self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
-    self.stickersView.delegate = self;
-    self.stickersView.stickers = self.candidateModel.images;
-    [self.stickerContainerView addSubview:self.stickersView];
-    [self.frameImage setImage:[UIImage imageNamed:[self.candidateModel getFrame]]];
+    [CandidateModel searchCandidate:@"Avdullah Hoti" results:^(NSArray *candidatesArray) {
+        self.stickersView = [[CameraStickersView alloc] initWithFrame:self.stickerContainerView.frame];
+        self.stickersView.delegate = self;
+        self.candidateModel = candidatesArray.firstObject;
+        [self.stickersView configureList:self.candidateModel];
+        [self.stickerContainerView addSubview:self.stickersView];
+        [self.frameImage setImage:[UIImage imageNamed:[self.candidateModel getFrame]]];
+    }];
     
+    cameraCollectionStickers = [[CameraCollectionStickers alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,self.view.bounds.size.height)];
+    cameraCollectionStickers.delegate = self;
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [session stopRunning];
+    //[session stopRunning];
     //    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
-- (void) dealloc {
+- (void)dealloc {
     [_imagePreview release];
     [_captureImage release];
     [imgPicker release];
@@ -544,17 +569,17 @@
                         if (sender.tag==AVCaptureFlashModeAuto) { // Current flash mode is Auto, set it to On
                             [device setFlashMode:AVCaptureFlashModeOn];
                             sender.tag = AVCaptureFlashModeOn;
-                            [sender setImage:[UIImage imageNamed:@"flash"] forState:UIControlStateNormal];
+                            [sender setImage:[UIImage imageNamed:@"Flash On"] forState:UIControlStateNormal];
                         }
                         else if (sender.tag==AVCaptureFlashModeOn){ // Current flash mode is On, set it to Off
                             [device setFlashMode:AVCaptureFlashModeOff];
                             sender.tag = AVCaptureFlashModeOff;
-                            [sender setImage:[UIImage imageNamed:@"flash-off"] forState:UIControlStateNormal];
+                            [sender setImage:[UIImage imageNamed:@"Flash Off"] forState:UIControlStateNormal];
                         }
                         else{ // Current flash mode is Off, set it to Auto
                             [device setFlashMode:AVCaptureFlashModeAuto];
                             sender.tag = AVCaptureFlashModeAuto;
-                            [sender setImage:[UIImage imageNamed:@"flash-auto"] forState:UIControlStateNormal];
+                            [sender setImage:[UIImage imageNamed:@"Flash Auto"] forState:UIControlStateNormal];
                         }
                         
                         [device unlockForConfiguration];
@@ -569,6 +594,7 @@
 
 #pragma mark - UI Control Helpers
 - (void)hideControllers {
+    [self.stickerButton setHidden:YES];
     [UIView animateWithDuration:0.0 animations:^{
         //1)animate them out of screen
         self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y+116.0);
@@ -582,6 +608,7 @@
 }
 
 - (void)showControllers {
+    [self.stickerButton setHidden:NO];
     [UIView animateWithDuration:0.2 animations:^{
         //1)animate them into screen
         self.photoBar.center = CGPointMake(self.photoBar.center.x, self.photoBar.center.y-116.0);
@@ -658,7 +685,7 @@
         if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
             SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             
-            [controller setInitialText:@"#LDK#AKR"];
+            [controller setInitialText:@"#BreziRepublikes"];
             [controller addImage:image];
             [self presentViewController:controller animated:YES completion:Nil];
         } else {
@@ -668,7 +695,7 @@
 }
 - (IBAction)postToInstagram:(id)sender {
     [self imageWithView:self.videoContainerView completion:^(UIImage *image) {
-        NSString *textToShare = @"#LdkAkr";
+        NSString *textToShare = @"#BreziRepublikes";
         
         NSArray *objectsToShare = @[textToShare, image];
         
@@ -684,7 +711,7 @@
         {
             SLComposeViewController *tweetSheet = [SLComposeViewController
                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
-            [tweetSheet setInitialText:@"#LDK"];
+            [tweetSheet setInitialText:@"#BreziRepublikes"];
             [tweetSheet addImage:image];
             [self presentViewController:tweetSheet animated:YES completion:nil];
         } else {
@@ -709,5 +736,33 @@
     UIGraphicsEndImageContext();
     block(snapshotImage);
 }
-
+- (IBAction)stickerAction:(id)sender {
+    /*StickersCollectionController *lgVC = [self.storyboard instantiateViewControllerWithIdentifier:@"StickersCollectionController"];
+    LGSemiModalNavViewController *semiModal = [[LGSemiModalNavViewController alloc]initWithRootViewController:lgVC];
+    semiModal.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width*1.2);
+    
+    semiModal.backgroundShadeColor = [UIColor whiteColor];
+    semiModal.animationSpeed = 0.35f;
+    semiModal.tapDismissEnabled = YES;
+    semiModal.backgroundShadeAlpha = 0.4;
+    semiModal.scaleTransform = CGAffineTransformMakeScale(.94, .94);
+    
+    [self presentViewController:semiModal animated:YES completion:nil];*/
+    [self.view addSubview:cameraCollectionStickers];
+}
+- (void)didSelectCameraCollectionSticker:(NSString *)sticker {
+    isSetSticker = YES;
+    float currentScale = [[self.stickerImageView.layer valueForKeyPath:@"transform.scale.x"] floatValue];
+    float minScale = 0.4;
+    float maxScale = 3.0;
+    float zoomSpeed = 1.5;
+    float deltaScale = 0.4;
+    deltaScale = ((deltaScale - 1) * zoomSpeed) + 1;
+    deltaScale = MIN(deltaScale, maxScale / currentScale);
+    deltaScale = MAX(deltaScale, minScale / currentScale);
+    CGAffineTransform zoomTransform = CGAffineTransformScale(self.stickerImageView.transform, deltaScale, deltaScale);
+    self.stickerImageView.transform = zoomTransform;
+    [self.stickerImageView setImage:[UIImage imageNamed:sticker]];
+    [cameraCollectionStickers removeFromSuperview];
+}
 @end
