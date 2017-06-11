@@ -11,6 +11,7 @@
 
 NSString *const kCandidateModelNumber = @"id";
 NSString *const kCandidateModelImages = @"images";
+NSString *const kCandidateModelThumbnails = @"thumbnails";
 NSString *const kCandidateModelName = @"name";
 NSString *const kCandidateModelType = @"type";
 
@@ -28,6 +29,9 @@ NSString *const kCandidateModelType = @"type";
     }
     if (![dictionary[kCandidateModelImages] isKindOfClass:[NSNull class]]) {
         self.images = dictionary[kCandidateModelImages];
+    }
+    if (![dictionary[kCandidateModelThumbnails] isKindOfClass:[NSNull class]]) {
+        self.thumbnails = dictionary[kCandidateModelThumbnails];
     }
     if (![dictionary[kCandidateModelName] isKindOfClass:[NSNull class]]) {
         self.name = dictionary[kCandidateModelName];

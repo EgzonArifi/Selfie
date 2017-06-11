@@ -13,13 +13,14 @@
 #define AlternativaBackColor [UIColor colorWithRed:208.0/255.0 green:161.0/255.0 blue:83.0/255.0 alpha:1.0]
 
 #define LdkFrame @"ldk_frame"
-#define AkrFrame @"akr_frame"
+#define AkrFrame @"ldk_frame"
 #define AlternativaFrame @"alternativa_frame"
 
 @interface CandidateModel : NSObject
 
 @property (nonatomic, strong) NSString *number;
 @property (nonatomic, strong) NSArray *images;
+@property (nonatomic, strong) NSArray *thumbnails;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) NSUInteger type;
 
