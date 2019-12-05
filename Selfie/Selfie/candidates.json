@@ -1,0 +1,40 @@
+ [
+  {
+  "id":"01",
+  "name":"Avdullah Hoti",
+  "type": 1,
+  "images":[
+            "hoti1",
+            "hoti2",
+            "hoti3",
+            "hoti4",
+            "hoti5"
+            ],
+  "thumbnails":[
+            "thumbnail1",
+            "thumbnail2",
+            "thumbnail3",
+            "thumbnail4",
+            "thumbnail5"
+            ]
+  },
+  {
+  "id":"02",
+  "name":"Behgjet Pacolli",
+  "type": 2,
+  "images":[
+            "begj1",
+            "begj2",
+            "begj3"
+            ]
+  },  {
+  "id":"03",
+  "name":"Mimoza Kusari",
+  "type": 3,
+  "images":[
+            "kusari1",
+            "kusari2",
+            "kusari3"
+            ]
+  }
+  ]
